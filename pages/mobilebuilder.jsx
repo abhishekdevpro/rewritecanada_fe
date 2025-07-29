@@ -46,7 +46,7 @@ const Print = dynamic(() => import("../components/utility/WinPrint"), {
 export default function MobileBuilder() {
   const [currentSection, setCurrentSection] = useState(0);
   const [selectedPdfType, setSelectedPdfType] = useState("1");
-  const [selectedTemplate, setSelectedTemplate] = useState("template1");
+  const [selectedTemplate, setSelectedTemplate] = useState("template2");
   const [isFinished, setIsFinished] = useState(false);
   const [isDownloading, setisDownloading] = useState(false);
   const [token, setToken] = useState(null);

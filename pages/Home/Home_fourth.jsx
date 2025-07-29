@@ -79,7 +79,7 @@ const Home_fourth = () => {
         </div>
       </div>
 
-      <Home_five />
+      {/* <Home_five /> */}
     </>
   );
 };

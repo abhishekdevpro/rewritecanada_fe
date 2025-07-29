@@ -130,7 +130,7 @@ export default function DashboardPage() {
           </main>
         </div>
         <MyResume />
-        <JobSearch />
+        {/* <JobSearch /> */}
       </div>
     </>
   );

@@ -11,7 +11,7 @@ const ATSResumeSection = () => {
     setIsAuthenticated(!!token);
   }, []);
   return (
-    <div className="relative w-full min-h-[400px] bg-gradient-to-br from-blue-950 to-emerald-500 p-8">
+    <div className="relative w-full min-h-[180px] bg-gradient-to-br from-blue-950 to-emerald-500 p-8">
       <div className="max-w-6xl mx-auto">
         {/* Main Content */}
         <div className="space-y-6 mb-12">
@@ -34,7 +34,7 @@ const ATSResumeSection = () => {
         </div>
 
         {/* Feature Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
             {
               icon: <FileText />,
@@ -57,7 +57,7 @@ const ATSResumeSection = () => {
               <span className="text-white font-medium">{feature.title}</span>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* Decorative Lines */}
         <div className="absolute top-0 right-0 w-1/3 h-full">

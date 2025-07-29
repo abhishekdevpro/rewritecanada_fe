@@ -171,7 +171,7 @@ function Home_first() {
 
   return (
     <>
-      <div className="bg-gray-100 pt-10 w-full overflow-hidden">
+      <div className=" bg-gradient-to-br from-blue-500 to-emerald-200 pt-10 w-full overflow-hidden">
         <div className="container mx-auto">
           <div className="flex justify-center md:hidden">
             <Link
@@ -221,7 +221,7 @@ function Home_first() {
                   <i className="fa-solid fa-star text-yellow-500"></i>{" "}
                   {t("reviews_certified")}
                 </div>
-                <div className="flex items-center align-middle">
+                {/* <div className="flex items-center align-middle">
                   <div className="text-lg font-bold">{t("featured_on")}</div>
                   <div>
                     <img
@@ -235,7 +235,7 @@ function Home_first() {
                       className="h-16 w-full"
                     />
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -262,7 +262,7 @@ function Home_first() {
       </div>
       <Home_step />
       <ATSResumeSection />
-      <Home_third />
+      {/* <Home_third /> */}
       {/* <Home_fourth /> */}
       {/* <ImageSlider />
       <Home_second /> */}

@@ -54,7 +54,7 @@ export default function WebBuilder() {
   // const [headerColor, setHeaderColor] = useState("");
   // const [backgroundColorss, setBgColor] = useState("");
   const [selectedPdfType, setSelectedPdfType] = useState("1");
-  const [selectedTemplate, setSelectedTemplate] = useState("template1");
+  const [selectedTemplate, setSelectedTemplate] = useState("template2");
   const [isFinished, setIsFinished] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);

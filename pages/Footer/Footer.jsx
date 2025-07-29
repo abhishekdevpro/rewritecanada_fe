@@ -344,9 +344,9 @@ const Footer = () => {
                 >
                   {t("footer.support")}
                 </li>
-                <li>
+                {/* <li>
                   <Link href="/salary-tools">{t("footer.salary_tool")}</Link>
-                </li>
+                </li> */}
                 <li>
                   <Link href="/terms&conditions">
                     {t("footer.terms_conditions")}
@@ -361,7 +361,7 @@ const Footer = () => {
             </div>
 
             {/* Section 3 */}
-            <div>
+            {/* <div>
               <h2 className="text-lg font-bold text-blue-950 hover:text-emerald-500 ">
                 {t("footer.scope_products")}
               </h2>
@@ -380,10 +380,10 @@ const Footer = () => {
                   <Link href="/ai-cv-parsing">{t("footer.ai_cv_parsing")}</Link>
                 </li>
               </ul>
-            </div>
+            </div> */}
 
             {/* Section 4 */}
-            <div>
+            {/* <div>
               <h2 className="text-lg font-bold text-blue-950 hover:text-emerald-500 ">
                 {t("footer.ai_resources")}
               </h2>
@@ -404,7 +404,7 @@ const Footer = () => {
                   </Link>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
 
           {/* Copyright */}

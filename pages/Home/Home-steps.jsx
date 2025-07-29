@@ -66,7 +66,7 @@ const Home_step = () => {
       </div> */}
       <div className="w-full md:w-1/2 mb-6 md:mb-0">
         <Image
-          src={createmyresume}
+          src=""
           alt="Resume Builder Tutorial"
           className="w-full h-auto rounded-lg shadow-lg max-h-[500px] "
         />

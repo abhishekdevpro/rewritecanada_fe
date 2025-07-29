@@ -689,26 +689,26 @@ const Navbar = () => {
             >
               {t("ai_resume_builder")}
             </Link>
-            <Link
+            {/* <Link
               href="/dashboard/myjobs"
               className="text-blue-950 hover:text-emerald-500 px-3 py-2 rounded-md text-lg font-semibold"
             >
               {t("jobs")}
-            </Link>
+            </Link> */}
             <Link
               href="https://blog.rewritecanada.ca/"
               className="text-blue-950 hover:text-emerald-500 px-3 py-2 rounded-md text-lg font-semibold"
             >
               {t("resources")}
             </Link>
-            <Link
+            {/* <Link
               href=""
               onClick={handleOpenPopup}
               className="text-blue-950 hover:text-emerald-500 px-3 py-2 rounded-md text-lg font-semibold"
             >
               {t("cibli_job_id")}
-              {/* CibliJob ID */}
-            </Link>
+             
+            </Link> */}
             <CibliJobId isOpen={isPopupOpen} onClose={handleClosePopup} />
           </div>
           <div className="hidden md:flex items-center gap-4">
@@ -766,16 +766,15 @@ const Navbar = () => {
                     >
                       {t("cover_letter")}
                     </Link>
-                    <Link
+                    {/* <Link
                       href="/settings"
                       className="block px-4 py-2 hover:bg-gray-200"
                       onClick={() => setIsDropdownOpen(false)}
                     >
-                      {/* <Settings className="mr-3 w-5 h-5 text-gray-500 group-hover:text-orange-500" /> */}
-                      {/* <span className="text-gray-800 group-hover:text-orange-500"> */}
+                      
                       {t("settings")}
-                      {/* </span> */}
-                    </Link>
+                      
+                    </Link> */}
                     <button
                       onClick={() => {
                         handleLogout();
@@ -837,12 +836,12 @@ const Navbar = () => {
               >
                 <Home size={20} />
               </Link>
-              <Link
+              {/* <Link
                 href="/dashboard/myjobs"
                 className="text-blue-950 hover:text-emerald-500 block px-3 py-2 rounded-md text-base font-semibold"
               >
                 {t("jobs")}
-              </Link>
+              </Link> */}
               <Link
                 href="/footers/AiResumeBuilder"
                 className="text-blue-950 hover:text-emerald-500 block px-3 py-2 rounded-md text-base font-semibold"
@@ -855,13 +854,13 @@ const Navbar = () => {
               >
                 {t("resources")}
               </Link>
-              <Link
+              {/* <Link
                 href=""
                 onClick={handleOpenPopup}
                 className="text-blue-950 hover:text-emerald-500 block px-3 py-2 rounded-md text-base font-semibold"
               >
                 {t("cibli_job_id")}
-              </Link>
+              </Link> */}
               <CibliJobId isOpen={isPopupOpen} onClose={handleClosePopup} />
               {isLoggedIn ? (
                 <>
@@ -889,16 +888,15 @@ const Navbar = () => {
                   >
                     {t("profile")}
                   </Link>
-                  <Link
+                  {/* <Link
                     href="/settings"
                     className="text-blue-950 hover:text-emerald-500 block px-3 py-2 rounded-md text-base font-semibold"
                     onClick={() => setIsDropdownOpen(false)}
                   >
-                    {/* <Settings className="mr-3 w-5 h-5 text-gray-500 group-hover:text-orange-500" /> */}
-                    {/* <span className="text-gray-800 group-hover:text-orange-500"> */}
+                   
                     {t("settings")}
-                    {/* </span> */}
-                  </Link>
+                  
+                  </Link> */}
                   <Link
                     href="/"
                     className="text-blue-950 hover:text-emerald-500 block px-3 py-2 rounded-md text-base font-semibold"
