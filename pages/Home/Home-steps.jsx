@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import createmyresume from "./Images/createmyresume.png";
+import rewritecanada from "./Images/rewritecanada.png";
 import Link from "next/link";
 
 const Home_step = () => {
@@ -59,14 +59,14 @@ const Home_step = () => {
     <div className="flex flex-col md:flex-row items-start gap-8 bg-gray-50 p-8">
       {/* <div className="w-full md:w-1/2">
         <Image
-          src={createmyresume}
+          src={rewritecanada}
           alt="Resume Builder Tutorial"
           className="w-full rounded-lg shadow-lg h-[500px]"
         />
       </div> */}
       <div className="w-full md:w-1/2 mb-6 md:mb-0">
         <Image
-          src=""
+          src={rewritecanada}
           alt="Resume Builder Tutorial"
           className="w-full h-auto rounded-lg shadow-lg max-h-[500px] "
         />
