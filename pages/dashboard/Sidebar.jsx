@@ -312,7 +312,7 @@ const Sidebar = ({ onClose }) => {
         <li>
           <Link
             href="/dashboard"
-            className="flex items-center p-2 bg-black border-b-2 border-black font-semibold text-white"
+            className="flex items-center p-2 bg-emerald-600 border-b-2 border-blue-950 font-semibold text-white"
             onClick={onClose}
           >
             <span className="mr-10">🖥️</span>
