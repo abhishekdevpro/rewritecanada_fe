@@ -183,7 +183,7 @@ const Sidebar = ({ onClose }) => {
   const getLinkClassName = (path) => {
     return router.pathname === path
       ? "flex items-center p-2 bg-blue-950 border-b-2 rounded font-semibold text-white"
-      : "flex items-center p-2 hover:bg-blue-950  border-b-2 rounded font-semibold  ";
+      : "flex items-center p-2 hover:bg-blue-950  hover:text-white border-b-2 rounded font-semibold  ";
   };
 
   return (
@@ -379,7 +379,7 @@ const Sidebar = ({ onClose }) => {
             <span>{t("my_cover_letters")}</span>
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link
             href="/dashboard/myjobs"
             className={getLinkClassName("/dashboard/myjobs")}
@@ -388,7 +388,7 @@ const Sidebar = ({ onClose }) => {
             <span className="mr-2">📑</span>
             <span>{t("my_jobs")}</span>
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link
             href="/dashboard/notification"
