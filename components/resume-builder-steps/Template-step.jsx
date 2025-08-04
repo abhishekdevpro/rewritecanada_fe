@@ -263,7 +263,7 @@ const TemplateStep = ({ onNext, onBack, onChange, value }) => {
     // { key: "template1", imageUrl: template1, name: "Modern Clean" },
     { key: "template2", imageUrl: template2, name: "Professional" },
     { key: "template3", imageUrl: template3, name: "Creative" },
-    { key: "template4", imageUrl: template4, name: "Executive" },
+    // { key: "template4", imageUrl: template4, name: "Executive" },
     // { key: "template5", imageUrl: template5, name: "Minimal" },
     { key: "template6", imageUrl: template6, name: "Classic" },
     // { key: "template7", imageUrl: template7, name: "Contemporary" },
@@ -310,12 +310,12 @@ const TemplateStep = ({ onNext, onBack, onChange, value }) => {
     //   name: "Minimal",
     //   // hasPhoto: true
     // },
-    // {
-    //   key: "template26",
-    //   imageUrl: template26,
-    //   name: "Classic",
-    //   // hasPhoto: false,
-    // },
+    {
+      key: "template26",
+      imageUrl: template26,
+      name: "Classic",
+      // hasPhoto: false,
+    },
     // {
     //   key: "template27",
     //   imageUrl: template27,

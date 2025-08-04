@@ -47,7 +47,7 @@ const TemplateSelector = ({
     // { key: "template1", imageUrl: template1, pdfType: 1 },
     { key: "template2", imageUrl: template2, pdfType: 3 },
     { key: "template3", imageUrl: template3, pdfType: 3 },
-    { key: "template4", imageUrl: template4, pdfType: 1 },
+    // { key: "template4", imageUrl: template4, pdfType: 1 },
     // { key: "template5", imageUrl: template5, pdfType: 3 },
     { key: "template6", imageUrl: template6, pdfType: 2 },
     // { key: "template7", imageUrl: template7, pdfType: 2 },
@@ -69,7 +69,7 @@ const TemplateSelector = ({
     // { key: "template23", imageUrl: template23, pdfType: 2 },
     // { key: "template24", imageUrl: template24, pdfType: 3 },
     // { key: "template25", imageUrl: template25, pdfType: 1 },
-    // { key: "template26", imageUrl: template26, pdfType: 3 },
+    { key: "template26", imageUrl: template26, pdfType: 3 },
     // { key: "template27", imageUrl: template27, pdfType: 3 },
     // { key: "template28", imageUrl: template21, pdfType: 2 },
   ];

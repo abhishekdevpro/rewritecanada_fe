@@ -133,9 +133,10 @@ import Link from "next/link";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import image1 from "./Images/homeimage1.jpg";
-import image2 from "./Images/homeimage2.jpg";
-import image3 from "./Images/homeimage3.jpg";
+import image1 from "./Images/template-img1.png";
+import image2 from "./Images/template-img2.png";
+import image3 from "./Images/template-img3.png";
+import image4 from "./Images/template-img4.png";
 import Image from "next/image";
 import Home_second from "./Home_second";
 import { useEffect, useState } from "react";
@@ -167,7 +168,7 @@ function Home_first() {
     autoplaySpeed: 3000,
   };
 
-  const images = [image1, image2, image3];
+  const images = [image1, image2, image3, image4];
 
   return (
     <>
@@ -244,7 +245,7 @@ function Home_first() {
               <div className="hidden md:block md:max-w-lg p-4">
                 <Slider {...settings}>
                   {images?.map((image, index) => (
-                    <div key={index} className="w-full">
+                    <div key={index} className="w-full ">
                       <Image
                         src={image}
                         alt={`slide-${index}`}
