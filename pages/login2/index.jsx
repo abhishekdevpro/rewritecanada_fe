@@ -411,7 +411,7 @@ const Login2 = () => {
                 {t("loginpage.agree_terms")}{" "}
                 <Link
                   href="/TermsandConditions"
-                  className="text-emerald-500  underline"
+                  className="text-emerald-600  underline"
                 >
                   {t("loginpage.terms_conditions")}
                 </Link>
@@ -425,7 +425,7 @@ const Login2 = () => {
                 ${
                   !isChecked || isLoading
                     ? "bg-gray-400 cursor-not-allowed "
-                    : "bg-blue-950  hover:bg-emerald-500"
+                    : "bg-blue-950  hover:bg-emerald-600"
                 }`}
               disabled={!isChecked || isLoading} // Disabled when terms are not checked or loading
             >

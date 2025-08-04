@@ -723,7 +723,7 @@ export default function WebBuilder() {
                   <button
                     type="button"
                     onClick={handleNext}
-                    className="w-40 h-10 rounded-lg bg-emerald-500 text-white font-medium transition hover:bg-emerald-600"
+                    className="w-40 h-10 rounded-lg bg-emerald-600 text-white font-medium transition hover:bg-emerald-600"
                   >
                     {currentSection === sections.length - 1
                       ? t("buttons.finish")
@@ -899,7 +899,7 @@ export default function WebBuilder() {
 
                 <button
                   onClick={downloadAsPDF}
-                  className="bg-emerald-500 text-white px-6 py-2 rounded-lg"
+                  className="bg-emerald-600 text-white px-6 py-2 rounded-lg"
                 >
                   {isDownloading ? (
                     <SaveLoader loadingText="Downloading" />
@@ -910,7 +910,7 @@ export default function WebBuilder() {
 
                 <button
                   onClick={handleBackToEditor}
-                  className="bg-gray-700 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition-colors"
+                  className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors"
                 >
                   {t("buttons.backToDashboard")}
                 </button>
@@ -1011,7 +1011,7 @@ export default function WebBuilder() {
                               <button
                                 onClick={downloadAsPDF}
                                 type="submit"
-                                className="w-full bg-emerald-400 text-black font-bold  rounded-[50px] hover:bg-emerald-500 transition duration-200"
+                                className="w-full bg-emerald-400 text-black font-bold  rounded-[50px] hover:bg-emerald-600 transition duration-200"
                               >
                                 <Image
                                   src={paypal}

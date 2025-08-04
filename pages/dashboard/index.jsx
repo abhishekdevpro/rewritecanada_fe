@@ -105,7 +105,7 @@ export default function DashboardPage() {
           </button>
           <button
             onClick={handleMyDashboard}
-            className="flex justify-center items-center px-4 py-2 w-full sm:w-auto bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition-colors duration-200 font-medium shadow-sm"
+            className="flex justify-center items-center px-4 py-2 w-full sm:w-auto bg-emerald-600 text-white rounded-lg hover:bg-emerald-600 transition-colors duration-200 font-medium shadow-sm"
           >
             {t("dashboard_page.myProfileDashboard")}
           </button>

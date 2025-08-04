@@ -11,7 +11,7 @@ const ATSResumeSection = () => {
     setIsAuthenticated(!!token);
   }, []);
   return (
-    <div className="relative w-full min-h-[180px] bg-gradient-to-br from-blue-950 to-emerald-500 p-8">
+    <div className="relative w-full min-h-[180px] bg-gradient-to-br from-blue-950 to-emerald-600 p-8">
       <div className="max-w-6xl mx-auto">
         {/* Main Content */}
         <div className="space-y-6 mb-12">

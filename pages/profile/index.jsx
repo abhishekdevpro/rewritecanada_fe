@@ -495,7 +495,7 @@ const ProfileForm = () => {
           </div>
           <button
             type="submit"
-            className="w-full bg-green-400 text-white p-2 rounded"
+            className="w-full bg-emerald-600 text-white p-2 rounded"
           >
             {t("update_profile")}
           </button>

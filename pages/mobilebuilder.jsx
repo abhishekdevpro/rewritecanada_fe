@@ -614,7 +614,7 @@ export default function MobileBuilder() {
         <button
           onClick={handlePrevious}
           disabled={currentSection === 0}
-          className="px-4 py-2 bg-green-500 text-white rounded-lg disabled:opacity-50"
+          className="px-4 py-2 bg-emerald-600 text-white rounded-lg disabled:opacity-50"
         >
           {t("buttons.previous")}
         </button>
@@ -623,7 +623,7 @@ export default function MobileBuilder() {
         </span>
         <button
           onClick={handleNext}
-          className="px-4 py-2 bg-yellow-500 text-black rounded-lg"
+          className="px-4 py-2 bg-blue-950 text-white rounded-lg"
         >
           {currentSection === sections.length - 1
             ? t("buttons.finish")
@@ -644,7 +644,7 @@ export default function MobileBuilder() {
                 onClick={() => handleSectionClick(index)}
                 className={`w-full p-3 mb-2 rounded-lg text-left ${
                   currentSection === index
-                    ? "bg-green-500 text-white"
+                    ? "bg-emerald-600 text-white"
                     : "bg-gray-100 text-blue-950"
                 }`}
               >
@@ -720,7 +720,7 @@ export default function MobileBuilder() {
             <div className="flex flex-col md:flex-row flex-grow ">
               <button
                 onClick={toggleMobileSidebar}
-                className="fixed z-10 bottom-20 right-4  bg-green-500 text-white p-3 rounded-full shadow-lg"
+                className="fixed z-10 bottom-20 right-4  bg-emerald-600 text-white p-3 rounded-full shadow-lg"
               >
                 {isMobileSidebarOpen ? (
                   <X className="h-6 w-6 stroke-2" />
@@ -775,7 +775,7 @@ export default function MobileBuilder() {
                 {/* <select
                   value={selectedFont}
                   onChange={handleFontChange}
-                  className="rounded-lg border-2 border-green-500 px-5 py-2 font-bold  bg-white text-black"
+                  className="rounded-lg border-2 border-emerald-600 px-5 py-2 font-bold  bg-white text-black"
                 >
                   <option value="Ubuntu">Ubuntu</option>
                   <option value="Calibri">Calibri</option>
@@ -803,7 +803,7 @@ export default function MobileBuilder() {
                 <LoaderButton
                   isLoading={isLoading}
                   onClick={handleClick}
-                  className=" text-white px-4 py-2 rounded-lg bottom-btns"
+                  className=" text-white bg-red-500 px-4 py-2 text- rounded-lg bottom-btns"
                 >
                   {loading === "save" ? (
                     <SaveLoader loadingText={t("buttons.saving")} />
@@ -814,7 +814,7 @@ export default function MobileBuilder() {
 
                 <button
                   onClick={downloadAsPDF}
-                  className=" bg-yellow-500 text-black px-4 py-2 rounded-lg bottom-btns"
+                  className=" bg-blue-950 text-white px-4 py-2 rounded-lg bottom-btns"
                 >
                   {/* {loading === "download" ? (
                     <SaveLoader loadingText={t("buttons.downloading")} />
@@ -829,7 +829,7 @@ export default function MobileBuilder() {
                 </button>
                 <button
                   onClick={handleBackToEditor}
-                  className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition-colors bottom-btns"
+                  className="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition-colors bottom-btns"
                 >
                   {t("buttons.backToDashboard")}
                 </button>
@@ -890,7 +890,7 @@ export default function MobileBuilder() {
                             </label>
                             <input
                               type="text"
-                              className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+                              className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-emerald-600"
                               value={`${formData.first_name} ${formData.last_name}`.trim()}
                               name="full name"
                               required
@@ -904,7 +904,7 @@ export default function MobileBuilder() {
                             </label>
                             <input
                               type="email"
-                              className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+                              className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-emerald-600"
                               value={formData.email}
                               name="email"
                               required
@@ -918,7 +918,7 @@ export default function MobileBuilder() {
                             </label>
                             <input
                               type="number"
-                              className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+                              className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-emerald-600"
                               name="phone"
                               value={formData.phone}
                               required
