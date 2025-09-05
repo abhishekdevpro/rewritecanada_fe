@@ -9,6 +9,10 @@ module.exports = {
       fontFamily: {
         nunito: ['"Nunito Sans"', "sans-serif"],
       },
+      colors: {
+        mainColor: "#488877",
+        lightColor: "#4888771A",
+      },
     },
   },
   plugins: [],

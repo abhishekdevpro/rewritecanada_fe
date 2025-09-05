@@ -2,6 +2,9 @@ import { File, FileText, Rocket } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import { useEffect, useState } from "react";
+import Button from "../../components/buttonUIComponent";
+import Image from "next/image";
+import ats from "../../public/assets/ats_sec_iocn.png";
 const ATSResumeSection = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
@@ -11,67 +14,32 @@ const ATSResumeSection = () => {
     setIsAuthenticated(!!token);
   }, []);
   return (
-    <div className="relative w-full min-h-[180px] bg-gradient-to-br from-blue-950 to-emerald-600 p-8">
+    <div className="relative w-full min-h-[180px] bg-white py-12 rounded-xl  flex items-center justify-between   ">
       <div className="max-w-6xl mx-auto">
         {/* Main Content */}
-        <div className="space-y-6 mb-12">
-          <h1 className="text-4xl font-bold text-white mb-4">
-            Resumes optimized for applicant tracking systems (ATS)
-          </h1>
+        <div className="flex justify-between bg-white shadow-2xl p-4">
+          <div className="">
+            <Image src={ats} height={200} width={200} />
+          </div>
+          <div className="space-y-6 my-12">
+            <h1 className="text-4xl font-bold text-mainColor mb-4">
+              Resumes optimized for applicant tracking systems (ATS)
+            </h1>
 
-          <p className="text-gray-200 text-lg max-w-2xl">
-            Enhancv resumes and cover letters are vigorously tested against
-            major ATS systems to ensure complete parsability
-          </p>
-
-          <Link
-            href={isAuthenticated ? "/dashboard/resume-builder" : "/login2"}
-          >
-            <button className="bg-red-500 hover:bg-red-600 text-white mt-4 font-medium py-3 px-6 rounded-lg transition-colors">
-              Build an ATS-Friendly Resume
-            </button>
-          </Link>
-        </div>
-
-        {/* Feature Cards */}
-        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[
-            {
-              icon: <FileText />,
-              title: "Readable contact information",
-            },
-            {
-              icon: <File />,
-              title: "Full experience section parsing",
-            },
-            {
-              icon: <Rocket />,
-              title: "Optimized skills section",
-            },
-          ].map((feature, index) => (
-            <div
-              key={index}
-              className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 flex items-center space-x-4"
+            <p className="text-mainColor text-lg max-w-2xl">
+              Enhance resumes and cover letters are vigorously tested against
+              major ATS systems to ensure complete parsability
+            </p>
+          </div>
+          <div className="mx-auto flex justify-center items-center">
+            <Link
+              href={isAuthenticated ? "/dashboard/resume-builder" : "/login2"}
             >
-              <div className="text-2xl text-white">{feature.icon}</div>
-              <span className="text-white font-medium">{feature.title}</span>
-            </div>
-          ))}
-        </div> */}
-
-        {/* Decorative Lines */}
-        <div className="absolute top-0 right-0 w-1/3 h-full">
-          {[...Array(5)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute right-0 h-px bg-gradient-to-r from-transparent to-teal-500"
-              style={{
-                top: `${20 + i * 15}%`,
-                width: `${60 + i * 10}%`,
-                opacity: 0.2,
-              }}
-            />
-          ))}
+              <Button className="bg-mainColor text-white">
+                Build an ATS-Friendly Resume
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

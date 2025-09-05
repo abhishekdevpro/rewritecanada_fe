@@ -59,7 +59,7 @@
 //             </div> */}
 
 //             <div className="w-full md:w-auto mb-6 md:mb-0">
-//               <h2 className="text-lg font-semibold text-blue-950 hover:text-emerald-600 ">
+//               <h2 className="text-lg font-semibold text-mainColor hover:text-mainColor ">
 //                 Get Our Weekly
 //               </h2>
 //               <form
@@ -87,7 +87,7 @@
 //           <br />
 //           <div className="flex flex-wrap justify-around">
 //             <div className="w-full md:w-auto mb-6 md:mb-0" id="footer">
-//               <h2 className="text-lg font-bold text-blue-950 hover:text-emerald-600 ">Cibli Job </h2>
+//               <h2 className="text-lg font-bold text-mainColor hover:text-mainColor ">Cibli Job </h2>
 //               <ul>
 //                 <li>
 //                   <Link href="/footers/Aboutus">
@@ -112,7 +112,7 @@
 //               </ul>
 //             </div>
 //             <div className="w-full md:w-auto mb-6 md:mb-0">
-//               <h2 className="text-lg font-bold text-blue-950 hover:text-emerald-600 ">Support</h2>
+//               <h2 className="text-lg font-bold text-mainColor hover:text-mainColor ">Support</h2>
 //               <ul>
 //                 <li>
 //                   <Link href="/footers/Salarytools">
@@ -132,7 +132,7 @@
 //               </ul>
 //             </div>
 //             <div className="w-full md:w-auto mb-6 md:mb-0">
-//               <h2 className="text-lg font-bold text-blue-950 hover:text-emerald-600 ">
+//               <h2 className="text-lg font-bold text-mainColor hover:text-mainColor ">
 //                 Scope & Products
 //               </h2>
 //               <ul>
@@ -164,7 +164,7 @@
 //               </ul>
 //             </div>
 //             <div className="w-full md:w-auto mb-6 md:mb-0">
-//               <h2 className="text-lg font-bold text-blue-950 hover:text-emerald-600 ">Ai Resources</h2>
+//               <h2 className="text-lg font-bold text-mainColor hover:text-mainColor ">Ai Resources</h2>
 //               <ul>
 //                 <li>
 //                   <Link href="/footers/AIEnhancedResumeAccuracy">
@@ -186,7 +186,7 @@
 //           </div>
 //         </div>
 //         <div className="container text-base md:mx-auto text-center border-t border-white pt-6 mt-6">
-//           <p className="text-blue-950 hover:text-emerald-600  text-right">
+//           <p className="text-mainColor hover:text-mainColor  text-right">
 //             &copy; Copyright By CibliJob.fr All Rights Reserved
 //           </p>
 //         </div>
@@ -209,7 +209,10 @@ import { toast } from "react-toastify";
 import { ResumeContext } from "../../components/context/ResumeContext";
 import axiosInstance from "../../components/utils/axiosInstance";
 import SupportPopup from "./supportpopup";
-
+import fb from "../../public/assets/footer_icon2.png";
+import insta from "../../public/assets/footer_icon3.png";
+import twitter from "../../public/assets/footer_icon4.png";
+import github from "../../public/assets/footer_icon2.png";
 const Footer = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -246,12 +249,12 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="bg-gray-300 text-black py-8" id="footerbg">
+      <footer className="bg-lightColor text-black py-8" id="footerbg">
         <div className="container mx-auto flex flex-col gap-7 px-6">
           {/* Top Section */}
-          <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-6 md:px-[65px]">
+          <div className="">
             {/* Logo and Tagline */}
-            <div className="text-center md:text-left">
+            {/* <div className="text-center md:text-left">
               <Link href="/">
                 <Image
                   src={logo}
@@ -259,39 +262,36 @@ const Footer = () => {
                   className="h-[100px] w-[200px] mx-auto md:mx-0"
                 />
               </Link>
-              <p className="text-lg font-bold mt-2 text-blue-950">
+              <p className="text-lg font-bold mt-2 text-mainColor">
                 {t("footer.building_careers")}
               </p>
-            </div>
+              <p>Clarity gives you the blocks and components you need to create a truly professional website.</p>
+            </div> */}
 
             {/* Subscribe */}
-            <div className="text-center md:text-left w-full md:w-auto">
-              <h2 className="text-lg font-semibold text-blue-950 hover:text-emerald-600 ">
-                {t("footer.get_our_weekly")}
+            <div className="bg-mainColor rounded-2xl p-8 flex flex-col items-center justify-center text-center">
+              <h2 className="text-2xl md:text-3xl font-semibold text-white mb-6">
+                Subscribe to our newsletter
               </h2>
+
               <form
                 onSubmit={handleSubmit}
-                className="flex flex-col md:flex-row gap-3 mt-2 justify-center md:justify-start"
+                className="flex flex-col md:flex-row items-center gap-4 w-full max-w-2xl"
               >
                 <input
                   type="email"
-                  placeholder={t("footer.type_your_email")}
+                  placeholder="Email address"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="p-2 rounded text-black w-full md:w-auto"
+                  className="flex-1 px-4 py-3 rounded-md border border-white/50 bg-transparent text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white"
                 />
-                {/* <button
-                  type="submit"
-                  className="px-4 py-2 rounded-full bg-white text-black hover:bg-green-500"
-                >
-                  {t("footer.subscribe")}
-                </button> */}
+
                 <button
                   type="submit"
-                  className="w-full sm:w-auto px-6 py-2 rounded-md bg-blue-950 text-white hover:bg-emerald-600 transition-colors duration-200"
+                  className="w-full md:w-auto px-6 py-3 rounded-md bg-black text-white font-medium hover:bg-gray-800 transition-colors duration-200"
                 >
-                  {t("footer.subscribe")}
+                  Subscribe Now
                 </button>
               </form>
             </div>
@@ -300,8 +300,33 @@ const Footer = () => {
           {/* Footer Links */}
           <div className="flex flex-col md:flex-row flex-wrap justify-center md:justify-around text-center md:text-left gap-6">
             {/* Section 1 */}
-            <div>
-              <h2 className="text-lg font-bold text-blue-950 hover:text-emerald-600 ">
+            <div className="text-center md:text-left">
+              <Link href="/">
+                <Image
+                  src={logo}
+                  alt="logo"
+                  className="h-[100px] w-[200px] mx-auto md:mx-0"
+                />
+              </Link>
+              <p className="text-lg font-bold mt-2 text-mainColor">
+                {t("footer.building_careers")}
+              </p>
+              <p>
+                Clarity gives you the blocks and <br />
+                components you need to create a
+                <br />
+                truly professional website.
+              </p>
+              <div className="flex justify-start gap-4 mt-4 ">
+                <Image src={twitter} height={30} width={30} alt="twitter" />
+                <Image src={fb} height={30} width={30} alt="fb" />
+                <Image src={insta} height={30} width={30} alt="insta" />
+                <Image src={github} height={30} width={30} alt="github" />
+              </div>
+            </div>
+
+            <div className="mt-6">
+              <h2 className="text-lg font-bold text-mainColor hover:text-mainColor ">
                 {t("footer.cibli_job")}
               </h2>
               <ul className="mt-2 space-y-1">
@@ -320,8 +345,8 @@ const Footer = () => {
             </div>
 
             {/* Section 2 */}
-            <div>
-              <h2 className="text-lg font-bold text-blue-950 hover:text-emerald-600 ">
+            <div className="mt-6">
+              <h2 className="text-lg font-bold text-mainColor hover:text-mainColor ">
                 {t("footer.support")}
               </h2>
               <div>
@@ -362,7 +387,7 @@ const Footer = () => {
 
             {/* Section 3 */}
             {/* <div>
-              <h2 className="text-lg font-bold text-blue-950 hover:text-emerald-600 ">
+              <h2 className="text-lg font-bold text-mainColor hover:text-mainColor ">
                 {t("footer.scope_products")}
               </h2>
               <ul className="mt-2 space-y-1">
@@ -384,7 +409,7 @@ const Footer = () => {
 
             {/* Section 4 */}
             {/* <div>
-              <h2 className="text-lg font-bold text-blue-950 hover:text-emerald-600 ">
+              <h2 className="text-lg font-bold text-mainColor hover:text-mainColor ">
                 {t("footer.ai_resources")}
               </h2>
               <ul className="mt-2 space-y-1">
@@ -409,7 +434,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <div className="border-t border-white pt-6 mt-6 text-center">
-            <p className="text-blue-950 hover:text-emerald-600 ">
+            <p className="text-[#52525B] hover:text-mainColor ">
               {t("footer.copyright")}
             </p>
           </div>

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import rewritecanada from "./Images/rewritecanada.png";
 import Link from "next/link";
+import Button from "../../components/buttonUIComponent";
 
 const Home_step = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -73,7 +74,7 @@ const Home_step = () => {
       </div>
 
       <div className="w-full md:w-1/2">
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">
+        <h1 className="text-4xl md:text-5xl font-bold text-black mb-8">
           How to Make a Resume — In 4 Simple Steps
         </h1>
 
@@ -81,7 +82,7 @@ const Home_step = () => {
           {steps.map((step, index) => (
             <div
               key={index}
-              className="border-l-4 border-blue-950 bg-white p-4 rounded-lg shadow-sm cursor-pointer"
+              className="border-l-4 border-mainColor bg-white p-4 rounded-lg shadow-sm cursor-pointer"
               onClick={() => toggleStep(index)}
             >
               <div className="flex justify-between items-center">
@@ -104,9 +105,9 @@ const Home_step = () => {
           ))}
         </div>
         <Link href={isAuthenticated ? "/dashboard/resume-builder" : "/login2"}>
-          <button className="mt-8 bg-blue-950 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-900 transition-colors">
+          <Button className="mt-8 bg-mainColor text-white ">
             Build my resume
-          </button>
+          </Button>
         </Link>
       </div>
     </div>

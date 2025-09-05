@@ -141,12 +141,14 @@ import Image from "next/image";
 import Home_second from "./Home_second";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next"; // Import useTranslation
-
+import banner from "../../public/assets/banner_img.png";
+import dollar from "../../public/assets/banner_iocn.png";
 import ImageSlider from "./Slider_details";
 import Home_step from "./Home-steps";
 import Home_third from "./Home_third";
 import ATSResumeSection from "./ATS-section";
 import Home_fourth from "./Home_fourth";
+import Button from "../../components/buttonUIComponent";
 
 function Home_first() {
   const { t } = useTranslation(); // Initialize useTranslation hook
@@ -172,27 +174,31 @@ function Home_first() {
 
   return (
     <>
-      <div className=" bg-gradient-to-br from-blue-500 to-emerald-200 pt-10 w-full overflow-hidden">
+      <div className=" bg-white pt-10 w-full overflow-hidden">
         <div className="container mx-auto">
           <div className="flex justify-center md:hidden">
-            <Link
+            {/* <Link
               href="/Home/FAQ/Contact"
               className="text-black bg-red-300 px-3 py-4 rounded-3xl font-bold text-center"
             >
-              {t("contact_us")} {/* Use translation key */}
-            </Link>
+              {t("contact_us")} 
+            </Link> */}
           </div>
 
           <div className="py-9 px-5 flex gap-3 md:gap-10 md:justify-evenly items-center flex-col md:flex-row">
             {/* Content Section */}
             <div className="px-3 py-3 w-full md:w-[500px]">
+              <div className="flex justify-start gap-4 items-center rounded-full bg-lightColor text-mainColor p-2 m-2">
+                <Image src={dollar} alt="dollar icon" height={20} width={20} />
+                <p>Discover The Easiest ways to Build Your CV!</p>
+              </div>
               <div className="flex flex-col gap-4">
-                <div className=" text-center text-2xl md:text-5xl font-bold leading-tight">
+                <div className="  text-2xl md:text-5xl font-bold leading-tight">
                   Introducing Our{" "}
                   <span className="text-gray-800 font-normal">
                     Smart AI-Powered Resume Builder
                   </span>{" "}
-                  <span className="text-black font-extrabold">
+                  <span className="text-mainColor font-extrabold">
                     &quot;Rewrite Canada&quot;
                   </span>
                 </div>
@@ -208,18 +214,13 @@ function Home_first() {
                       isAuthenticated ? "/dashboard/resume-builder" : "/login2"
                     }
                   >
-                    <button className="text-white bg-blue-950 text-lg px-6 py-2 rounded-full font-bold hover:shadow-2xl hover:shadow-slate-500">
+                    <Button className="text-white bg-mainColor  ">
                       {t("build_resume")} {/* Use translation key */}
-                    </button>
+                    </Button>
                   </Link>
                 </div>
 
                 <div className="font-bold text-base">
-                  <i className="fa-solid fa-star text-yellow-500"></i>{" "}
-                  <i className="fa-solid fa-star text-yellow-500"></i>{" "}
-                  <i className="fa-solid fa-star text-yellow-500"></i>{" "}
-                  <i className="fa-solid fa-star text-yellow-500"></i>{" "}
-                  <i className="fa-solid fa-star text-yellow-500"></i>{" "}
                   {t("reviews_certified")}
                 </div>
                 {/* <div className="flex items-center align-middle">
@@ -243,19 +244,7 @@ function Home_first() {
             {/* Image Slider Section */}
             <div className="px-6 py-3">
               <div className="hidden md:block md:max-w-lg p-4">
-                <Slider {...settings}>
-                  {images?.map((image, index) => (
-                    <div key={index} className="w-full ">
-                      <Image
-                        src={image}
-                        alt={`slide-${index}`}
-                        width={320}
-                        height={240}
-                        className="transition-transform transform hover:scale-105 md:h-auto md:w-96"
-                      />
-                    </div>
-                  ))}
-                </Slider>
+                <Image src={banner} alt="banner" height={400} width={400} />
               </div>
             </div>
           </div>

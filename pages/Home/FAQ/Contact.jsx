@@ -99,10 +99,10 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="bg-gray-100 py-12 lg:py-20">
+    <div className="bg-white py-12 lg:py-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <h2
-          className="text-3xl font-bold text-center mb-8 sm:mb-12 text-blue-950"
+          className="text-4xl lg:text-5xl font-bold text-center text-black mb-12"
           id="phone"
         >
           {t("getintouch")}
