@@ -305,7 +305,7 @@ const Footer = () => {
                 <Image
                   src={logo}
                   alt="logo"
-                  className="h-[100px] w-[200px] mx-auto md:mx-0"
+                  className="h-[100px] w-[150px] mx-auto md:mx-0"
                 />
               </Link>
               <p className="text-lg font-bold mt-2 text-mainColor">
