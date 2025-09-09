@@ -199,7 +199,7 @@ export default function Subscription() {
   return (
     <>
       <Navbar />
-      <div className="p-4 md:p-10 max-w-5xl mx-auto  bg-gradient-to-b from-white to-blue-200">
+      <div className="p-4 md:p-10 max-w-5xl mx-auto  bg-gradient-to-b from-white to-mainColor">
         <h2 className="text-2xl font-semibold mb-6">
           {t("subscription.title")}
         </h2>

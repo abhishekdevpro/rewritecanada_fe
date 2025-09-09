@@ -3,6 +3,7 @@ import { BASE_URL } from "../../../components/Constant/constant";
 import { useTranslation } from "react-i18next";
 import { ResumeContext } from "../../../components/context/ResumeContext";
 import axiosInstance from "../../../components/utils/axiosInstance";
+import Button from "../../../components/buttonUIComponent";
 const ContactUs = () => {
   const [isFormVisible, setIsFormVisible] = useState(false);
   const [formData, setFormData] = useState({
@@ -99,15 +100,17 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="bg-white py-12 lg:py-20">
+    <div className="bg-mainColor py-12 lg:py-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <h2
-          className="text-4xl lg:text-5xl font-bold text-center text-black mb-12"
+          className="text-4xl lg:text-5xl font-bold text-center text-white mb-12"
           id="phone"
         >
           {t("getintouch")}
         </h2>
-        <p className="text-center mb-8 sm:mb-12">{t("contact_paragraph")}</p>
+        <p className="text-center mb-8 sm:mb-12 text-white">
+          {t("contact_paragraph")}
+        </p>
         {/* <div className="flex flex-col md:flex-row items-center justify-center gap-8 border border-green-500 ">
           <div className="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg p-6 ">
             <div className="flex items-center mb-4">
@@ -271,10 +274,10 @@ const ContactUs = () => {
               <span className="font-bold">&quot;Dummy&quot;</span>
             </p>
             <div>
-              <button className="border px-3 py-2 rounded-lg">
+              <Button className="bg-mainColor text-white">
                 <a
                   href="mailto:dummy@rewritecanada.ca"
-                  className="text-slate-800 font-semibold text-sm hover:underline flex items-center"
+                  className="text-white font-semibold text-sm hover:underline flex items-center"
                 >
                   dummy@rewritecanada.ca
                   <svg
@@ -292,7 +295,7 @@ const ContactUs = () => {
                     />
                   </svg>
                 </a>
-              </button>
+              </Button>
             </div>
           </div>
 
@@ -309,8 +312,8 @@ const ContactUs = () => {
             <p className="text-slate-600 font-light mb-4 text-sm">
               {t("reach_out")}
             </p>
-            <button
-              className="border px-3 py-2 rounded-lg"
+            <Button
+              className="bg-mainColor text-white"
               // onClick={() =>
               //   window.open(
               //     "https://wa.me/918910082347",
@@ -319,7 +322,7 @@ const ContactUs = () => {
               //   )
               // }
             >
-              <span className="text-slate-800 font-semibold text-sm hover:underline flex items-center">
+              <span className="text-white font-semibold text-sm hover:underline flex items-center">
                 {t("chat")}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -336,7 +339,7 @@ const ContactUs = () => {
                   />
                 </svg>
               </span>
-            </button>
+            </Button>
 
             {isFormVisible && (
               <div className="bg-white shadow-md border rounded-lg p-6 w-full mt-4 z-10">

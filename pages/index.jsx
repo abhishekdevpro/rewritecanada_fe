@@ -11,13 +11,17 @@ const ResumeBuilder = () => {
   return (
     <>
       {/* <Builder /> */}
-      <Navbar />
-      <Home_first />
-      <Home_fourth />
-      <FAQ />
-      {/* <Loder/> */}
-
-      <Footer />
+      <div className="fixed top-0 left-0 w-full z-50 ">
+        <Navbar />
+      </div>
+      <main className="pt-10">
+        {" "}
+        {/* adjust this based on your navbar height */}
+        <Home_first />
+        <Home_fourth />
+        <FAQ />
+        <Footer />
+      </main>
     </>
   );
 };

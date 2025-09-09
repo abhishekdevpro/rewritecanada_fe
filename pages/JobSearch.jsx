@@ -289,7 +289,7 @@ const JobSearch = () => {
   //     console.log("called");
   //     try {
   //       const response = await fetch(
-  //         "https://api.createmyresume.in/api/user/job-list"
+  //         "https://api.rewritecanada.ca/api/user/job-list"
   //       );
   //       if (!response.ok) {
   //         throw new Error("Failed to fetch job data");

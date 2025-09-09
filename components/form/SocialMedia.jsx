@@ -654,14 +654,14 @@ const SocialMedia = () => {
                 </div>
               )}
             </div>
-            <Button
+            <button
               type="button"
               onClick={() => removeSocialMedia(index)}
               aria-label="Remove"
               className="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded bg-red-500 text-white hover:bg-red-600 transition-colors md:ml-2"
             >
               <Trash className="w-5 h-5" />
-            </Button>
+            </button>
           </div>
         ))}
       </div>

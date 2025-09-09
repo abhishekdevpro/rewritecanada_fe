@@ -149,7 +149,7 @@ export default function ExperienceStep({ onNext, onBack, onChange, value }) {
   console.log(exp, "no-of exp");
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-blue-200 flex flex-col">
+    <div className="min-h-screen bg-gradient-to-b from-white to-mainColor flex flex-col">
       <main className="flex-1 flex flex-col items-center justify-center px-4 py-12">
         <div className="max-w-xl text-center">
           <h1 className="text-3xl md:text-4xl font-bold text-teal-700 mb-4">

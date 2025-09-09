@@ -427,7 +427,7 @@ const CVSelector = ({ onNext, onBack, onChange, value }) => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-blue-200 flex flex-col">
+    <div className="min-h-screen bg-gradient-to-b from-white to-mainColor flex flex-col">
       <div className="bg-blue-950 text-white py-3 px-6 rounded-b-3xl mx-auto mt-4   items-center gap-3 shadow-md">
         <h2 className="text-3xl font-bold text-white">
           {t("cvSelector.title")}

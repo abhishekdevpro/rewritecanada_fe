@@ -514,7 +514,7 @@ const Signup = () => {
           <div className="flex justify-center mb-4">
             <Image
               src={logo}
-              className="w-[200px] h-[100px] object-contain"
+              className="w-[150px] h-[100px] object-contain"
               alt="Logo"
             />
           </div>

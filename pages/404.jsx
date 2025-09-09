@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import logo from "./Navbar/logo.png";
 import Image from "next/image";
 import Link from "next/link";
+import Button from "../components/buttonUIComponent";
 const Custom404 = () => {
   const router = useRouter();
 
@@ -9,7 +10,7 @@ const Custom404 = () => {
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 text-center p-6">
       <div className="flex-shrink-0 flex items-center">
         <Link href="/">
-          <Image src={logo} alt="logo" className="h-[100px] w-[200px]" />
+          <Image src={logo} alt="logo" className="h-[100px] w-[150px]" />
         </Link>
       </div>
       <h1 className="text-6xl font-bold text-red-600">404</h1>
@@ -21,18 +22,18 @@ const Custom404 = () => {
       </p>
 
       <div className="mt-6 flex gap-4">
-        <button
+        <Button
           onClick={() => router.push("/")}
-          className="px-6 py-2 bg-blue-600 text-white rounded-md shadow-md hover:bg-blue-700 transition"
+          className=" bg-mainColor text-white "
         >
           Go to Home
-        </button>
-        <button
+        </Button>
+        <Button
           onClick={() => router.push("/login2")}
-          className="px-6 py-2 bg-blue-950 text-white rounded-md shadow-md hover:bg-blue-900 transition"
+          className=" bg-mainsecondColor text-white "
         >
           Go to Login
-        </button>
+        </Button>
       </div>
     </div>
   );

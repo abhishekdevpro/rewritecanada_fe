@@ -213,6 +213,8 @@ import fb from "../../public/assets/footer_icon2.png";
 import insta from "../../public/assets/footer_icon3.png";
 import twitter from "../../public/assets/footer_icon4.png";
 import github from "../../public/assets/footer_icon2.png";
+import bg1 from "../../public/assets/footer-bg1.png";
+import bg2 from "../../public/assets/footer-bg2.png";
 const Footer = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -249,192 +251,169 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="bg-lightColor text-black py-8" id="footerbg">
-        <div className="container mx-auto flex flex-col gap-7 px-6">
-          {/* Top Section */}
-          <div className="">
-            {/* Logo and Tagline */}
-            {/* <div className="text-center md:text-left">
-              <Link href="/">
-                <Image
-                  src={logo}
-                  alt="logo"
-                  className="h-[100px] w-[200px] mx-auto md:mx-0"
-                />
-              </Link>
-              <p className="text-lg font-bold mt-2 text-mainColor">
-                {t("footer.building_careers")}
-              </p>
-              <p>Clarity gives you the blocks and components you need to create a truly professional website.</p>
-            </div> */}
-
-            {/* Subscribe */}
-            <div className="bg-mainColor rounded-2xl p-8 flex flex-col items-center justify-center text-center">
-              <h2 className="text-2xl md:text-3xl font-semibold text-white mb-6">
-                Subscribe to our newsletter
-              </h2>
-
-              <form
-                onSubmit={handleSubmit}
-                className="flex flex-col md:flex-row items-center gap-4 w-full max-w-2xl"
-              >
-                <input
-                  type="email"
-                  placeholder="Email address"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="flex-1 px-4 py-3 rounded-md border border-white/50 bg-transparent text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white"
-                />
-
-                <button
-                  type="submit"
-                  className="w-full md:w-auto px-6 py-3 rounded-md bg-black text-white font-medium hover:bg-gray-800 transition-colors duration-200"
-                >
-                  Subscribe Now
-                </button>
-              </form>
+      <footer className="bg-lightColor text-black py-6 md:py-8" id="footerbg">
+        <div className="container mx-auto flex flex-col gap-6 md:gap-8 px-4 md:px-6">
+          {/* Newsletter Section */}
+          <div className="relative bg-mainColor rounded-xl md:rounded-2xl p-6 md:p-12 flex flex-col items-center justify-center text-center">
+            <div>
+              <Image className="absolute top-0 left-0" src={bg1} alt="bg1" />
+              <Image
+                className="absolute bottom-0 right-0"
+                src={bg2}
+                alt="bg2"
+              />
             </div>
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-white mb-4 md:mb-6">
+              Subscribe to our newsletter
+            </h2>
+
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col sm:flex-row items-center gap-3 md:gap-4 w-full max-w-2xl"
+            >
+              <input
+                type="email"
+                placeholder="Email address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="w-full sm:flex-1 px-4 py-3 rounded-md border border-white/50 bg-transparent text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white text-sm md:text-base"
+              />
+
+              <button
+                type="submit"
+                className="w-full sm:w-auto px-6 py-3 rounded-md bg-black text-white font-medium hover:bg-gray-800 transition-colors duration-200 text-sm md:text-base"
+              >
+                Subscribe Now
+              </button>
+            </form>
           </div>
 
           {/* Footer Links */}
-          <div className="flex flex-col md:flex-row flex-wrap justify-center md:justify-around text-center md:text-left gap-6">
-            {/* Section 1 */}
-            <div className="text-center md:text-left">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 text-center sm:text-left">
+            {/* Company Info Section */}
+            <div className="sm:col-span-2 lg:col-span-1">
               <Link href="/">
                 <Image
                   src={logo}
                   alt="logo"
-                  className="h-[100px] w-[150px] mx-auto md:mx-0"
+                  className="h-[100px] w-[150px]  mx-auto sm:mx-0"
                 />
               </Link>
-              <p className="text-lg font-bold mt-2 text-mainColor">
+              <p className="text-base md:text-lg font-bold mt-2 text-mainColor">
                 {t("footer.building_careers")}
               </p>
-              <p>
-                Clarity gives you the blocks and <br />
+              <p className="text-sm md:text-base mt-2 leading-relaxed">
+                Clarity gives you the blocks and
+                <br />
                 components you need to create a
                 <br />
                 truly professional website.
               </p>
-              <div className="flex justify-start gap-4 mt-4 ">
-                <Image src={twitter} height={30} width={30} alt="twitter" />
-                <Image src={fb} height={30} width={30} alt="fb" />
-                <Image src={insta} height={30} width={30} alt="insta" />
-                <Image src={github} height={30} width={30} alt="github" />
+              <div className="flex justify-center sm:justify-start gap-3 md:gap-4 mt-4">
+                <Image
+                  src={twitter}
+                  height={24}
+                  width={24}
+                  alt="twitter"
+                  className="hover:opacity-80 transition-opacity cursor-pointer"
+                />
+                <Image
+                  src={fb}
+                  height={24}
+                  width={24}
+                  alt="facebook"
+                  className="hover:opacity-80 transition-opacity cursor-pointer"
+                />
+                <Image
+                  src={insta}
+                  height={24}
+                  width={24}
+                  alt="instagram"
+                  className="hover:opacity-80 transition-opacity cursor-pointer"
+                />
+                <Image
+                  src={github}
+                  height={24}
+                  width={24}
+                  alt="github"
+                  className="hover:opacity-80 transition-opacity cursor-pointer"
+                />
               </div>
             </div>
 
+            {/* Company Links */}
             <div className="mt-6">
-              <h2 className="text-lg font-bold text-mainColor hover:text-mainColor ">
+              <h2 className="text-base md:text-lg font-bold text-mainColor mb-3 md:mb-4">
                 {t("footer.cibli_job")}
               </h2>
-              <ul className="mt-2 space-y-1">
+              <ul className="space-y-2 md:space-y-3">
                 <li>
-                  <Link href="/about-us">{t("footer.about_us")}</Link>
+                  <Link
+                    href="/about-us"
+                    className="text-sm md:text-base hover:text-mainColor transition-colors duration-200"
+                  >
+                    {t("footer.about_us")}
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/careers">{t("footer.careers")}</Link>
+                  <Link
+                    href="/careers"
+                    className="text-sm md:text-base hover:text-mainColor transition-colors duration-200"
+                  >
+                    {t("footer.careers")}
+                  </Link>
                 </li>
                 <li>
-                  <Link href="https://blog.rewritecanada.ca/">
+                  <Link
+                    href="https://blog.rewritecanada.ca/"
+                    className="text-sm md:text-base hover:text-mainColor transition-colors duration-200"
+                  >
                     {t("footer.resources")}
                   </Link>
                 </li>
               </ul>
             </div>
 
-            {/* Section 2 */}
+            {/* Support Links */}
             <div className="mt-6">
-              <h2 className="text-lg font-bold text-mainColor hover:text-mainColor ">
+              <h2 className="text-base md:text-lg font-bold text-mainColor mb-3 md:mb-4">
                 {t("footer.support")}
               </h2>
-              <div>
-                {/* <button
-                  className="bg-blue-500 text-white px-4 py-2 rounded"
-                  onClick={() => setShowPopup(true)}
-                >
-                  Open Support Form
-                </button> */}
-
-                <SupportPopup
-                  isOpen={showPopup}
-                  onClose={() => setShowPopup(false)}
-                />
-              </div>
-              <ul className="mt-2 space-y-1">
+              <SupportPopup
+                isOpen={showPopup}
+                onClose={() => setShowPopup(false)}
+              />
+              <ul className="space-y-2 md:space-y-3">
                 <li
                   onClick={() => setShowPopup(true)}
-                  className=" cursor-pointer"
+                  className="cursor-pointer text-sm md:text-base hover:text-mainColor transition-colors duration-200"
                 >
                   {t("footer.support")}
                 </li>
-                {/* <li>
-                  <Link href="/salary-tools">{t("footer.salary_tool")}</Link>
-                </li> */}
                 <li>
-                  <Link href="/terms&conditions">
+                  <Link
+                    href="/terms&conditions"
+                    className="text-sm md:text-base hover:text-mainColor transition-colors duration-200"
+                  >
                     {t("footer.terms_conditions")}
                   </Link>
                 </li>
                 <li>
-                  <Link href="/privacy-policy">
+                  <Link
+                    href="/privacy-policy"
+                    className="text-sm md:text-base hover:text-mainColor transition-colors duration-200"
+                  >
                     {t("footer.privacy_policy")}
                   </Link>
                 </li>
               </ul>
             </div>
-
-            {/* Section 3 */}
-            {/* <div>
-              <h2 className="text-lg font-bold text-mainColor hover:text-mainColor ">
-                {t("footer.scope_products")}
-              </h2>
-              <ul className="mt-2 space-y-1">
-                <li>
-                  <Link href="/ai-resume-builder-online">
-                    {t("footer.ai_resume_builder")}
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/ai-skill-tests">
-                    {t("footer.ai_skill_tests")}
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/ai-cv-parsing">{t("footer.ai_cv_parsing")}</Link>
-                </li>
-              </ul>
-            </div> */}
-
-            {/* Section 4 */}
-            {/* <div>
-              <h2 className="text-lg font-bold text-mainColor hover:text-mainColor ">
-                {t("footer.ai_resources")}
-              </h2>
-              <ul className="mt-2 space-y-1">
-                <li>
-                  <Link href="/ai-enhanced-resume-accuracy">
-                    {t("footer.ai_resume_accuracy")}
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/ai-resume-enhancer">
-                    {t("footer.ai_resume_enhancer")}
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/ai-job-match-apply">
-                    {t("footer.ai_job_match_apply")}
-                  </Link>
-                </li>
-              </ul>
-            </div> */}
           </div>
 
           {/* Copyright */}
-          <div className="border-t border-white pt-6 mt-6 text-center">
-            <p className="text-[#52525B] hover:text-mainColor ">
+          <div className="border-t border-gray-300 pt-4 md:pt-6 mt-4 md:mt-6 text-center">
+            <p className="text-xs md:text-sm text-[#52525B] hover:text-mainColor transition-colors duration-200">
               {t("footer.copyright")}
             </p>
           </div>

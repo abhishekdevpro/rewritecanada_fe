@@ -344,7 +344,7 @@ export default function MyJobs() {
   return (
     <div>
       <Navbar />
-      <div className="min-h-screen flex flex-col items-center bg-gradient-to-b from-white to-blue-200">
+      <div className="min-h-screen flex flex-col items-center bg-gradient-to-b from-white to-mainColor">
         <div className="w-full shadow-md">{/* <ProfilePage /> */}</div>
 
         <div className="flex flex-1 w-full  mt-4 bg-white shadow-md rounded-lg overflow-hidden">
@@ -365,7 +365,7 @@ export default function MyJobs() {
           </div>
 
           {/* Content area */}
-          <div className="flex-1 w-full max-w-8xl p-4 overflow-auto bg-gradient-to-b from-white to-blue-200">
+          <div className="flex-1 w-full max-w-8xl p-4 overflow-auto bg-gradient-to-b from-white to-mainColor">
             <JobSearch />
           </div>
           {/* Content area */}

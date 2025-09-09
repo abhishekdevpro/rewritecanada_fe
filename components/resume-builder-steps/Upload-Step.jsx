@@ -77,7 +77,7 @@ export default function UploadStep({ onNext, onBack, onChange, value }) {
     //     </button>
     //   </div>
     // </div>
-    <div className="space-y-6 bg-gradient-to-b from-white to-blue-200">
+    <div className="space-y-6 bg-gradient-to-b from-white to-mainColor">
       <div className="text-center bg-blue-950 pt-4 pb-4 mb-4">
         <h2 className="text-2xl font-bold text-white">
           {t("uploadStep.title")}
@@ -85,7 +85,7 @@ export default function UploadStep({ onNext, onBack, onChange, value }) {
         <p className="mt-2 text-white">{t("uploadStep.description")}</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4">
         <button
           onClick={() => {
             onChange("upload");
@@ -116,7 +116,7 @@ export default function UploadStep({ onNext, onBack, onChange, value }) {
         </button>
       </div>
 
-      <div className="flex justify-between mt-8">
+      <div className="flex justify-between mt-8 p-4">
         <button
           onClick={onBack}
           className="px-6 py-2 border rounded-lg hover:bg-gray-50"

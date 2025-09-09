@@ -29,8 +29,8 @@ const NewPages = () => {
         <Image
           src={logo}
           alt="Rewrite Canada AI"
-          width={200}
-          height={200}
+          width={150}
+          height={100}
           className="rounded-md"
         />
       </div>

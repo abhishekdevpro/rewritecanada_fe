@@ -114,7 +114,7 @@ function CibliJobId({ isOpen, onClose }) {
       }}
     >
       <div
-        className=" bg-gradient-to-b from-white to-blue-200"
+        className=" bg-gradient-to-b from-white to-mainColor"
         style={{
           // backgroundColor: "white",
           padding: "20px",
@@ -127,7 +127,7 @@ function CibliJobId({ isOpen, onClose }) {
         <div className="hero">
           <div className="flex justify-center items-center mb-2">
             <Link href="/">
-              <Image src={logo} alt="logo" className="h-[100px] w-[200px]" />
+              <Image src={logo} alt="logo" className="h-[100px] w-[150px]" />
             </Link>
           </div>
           <h1>{t("modal.title")}</h1>

@@ -28,7 +28,7 @@ export default function UploadStep({ onNext, onBack, onChange, value }) {
   };
 
   return (
-    <div className="space-y-6 bg-gradient-to-b from-white to-blue-200">
+    <div className="space-y-6 bg-gradient-to-b from-white to-mainColor">
       <div className="text-center bg-blue-950 pt-4 pb-4 mb-4">
         <h2 className="text-2xl font-bold text-white">
           {t("cvUploadStep.title")}

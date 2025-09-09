@@ -42,7 +42,7 @@ const LoginEmail = () => {
           <span className="mr-2">←</span> Back
         </Link>
         <div className="flex justify-center mb-6">
-          <Image src={logo} alt="Logo" className="h-[100px] w-[200px]" />
+          <Image src={logo} alt="Logo" className="h-[100px] w-[150px]" />
         </div>
 
         {/* Welcome Text */}

@@ -11,6 +11,7 @@ import axios from "axios";
 import { BASE_URL } from "../../components/Constant/constant";
 import { ResumeContext } from "../../components/context/ResumeContext";
 import axiosInstance from "../../components/utils/axiosInstance";
+import Button from "../../components/buttonUIComponent";
 const LoginCode = () => {
   const [otp, setOtp] = useState("");
   const [captchaVerified, setCaptchaVerified] = useState(false);
@@ -61,19 +62,16 @@ const LoginCode = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-white to-mainColor px-4">
       <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
         {/* Back Button */}
-        <Link
-          href="/login2"
-          className="text-[#00b38d] flex items-center mb-6 hover:text-[#00b38d]"
-        >
+        <Link href="/login2" className="text-mainColor flex items-center mb-6 ">
           <span className="mr-2">←</span> Back
         </Link>
 
         {/* Logo */}
         <div className="flex justify-center mb-6">
-          <Image src={logo} alt="Logo" className="h-[100px] w-[200px]" />
+          <Image src={logo} alt="Logo" className="h-[100px] w-[150px]" />
         </div>
 
         {/* Title */}
@@ -104,22 +102,22 @@ const LoginCode = () => {
           Didn&apos;t receive your code?{" "}
           <Link href="/login2">
             {" "}
-            <button className="text-[#00b38d] font-semibold hover:text-[#00b38d]">
+            <button className="text-mainColor font-semibold hover:text-mainColor">
               Send new code
             </button>
           </Link>
         </p>
 
         {/* Sign In Button */}
-        <button
+        <Button
           onClick={handleSignIn}
-          className="w-full bg-[#00b38d] text-white py-2 px-4 rounded-md hover:bg-[#00b38d] flex items-center justify-center"
+          className="w-full bg-mainColor text-white "
         >
           Sign in <span className="ml-2">→</span>
-        </button>
+        </Button>
 
         {/* Alternative Option */}
-        <p className="mt-6 text-center text-sm text-[#00b38d] font-semibold">
+        <p className="mt-6 text-center text-sm text-mainColor font-semibold">
           Don&apos;t have access to this email?
         </p>
       </div>

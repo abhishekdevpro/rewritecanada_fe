@@ -219,7 +219,7 @@
 //                   <img
 //                     src={
 //                       photo
-//                         ? `https://api.createmyresume.in${photo}`
+//                         ? `https://api.rewritecanada.ca${photo}`
 //                         : "https://img.freepik.com/premium-vector/businessman-avatar-illustration-cartoon-user-portrait-user-profile-icon_118339-4382.jpg"
 //                     }
 //                     alt="User"
@@ -644,18 +644,22 @@ const Navbar = () => {
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
 
   return (
-    <nav className="bg-white border-b border-gray-200 shadow-2xl">
+    <nav className="bg-white border-b border-gray-200 shadow-md ">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0 flex items-center">
             <Link href="/">
-              <Image src={logo} alt="logo" className="h-[100px]  w-[200px]" />
+              <Image src={logo} alt="logo" className="h-[100px]  w-[150px]" />
             </Link>
           </div>
           <div className="hidden md:flex justify-center items-center space-x-4">
             <Link
               href="/"
-              className="text-black hover:text-mainColor px-3 py-2 rounded-md text-lg font-semibold"
+              className={`px-3 py-2  text-lg font-semibold transition-colors ${
+                router.pathname === "/"
+                  ? "text-mainColor border-b-2 border-mainColor"
+                  : "text-black hover:text-mainColor"
+              }`}
             >
               <Home size={20} />
             </Link>
@@ -663,7 +667,11 @@ const Navbar = () => {
               <div>
                 <Link
                   href="/dashboard"
-                  className="text-black hover:text-mainColor px-3 py-2 rounded-md text-lg font-semibold"
+                  className={`px-3 py-2  text-lg font-semibold transition-colors ${
+                    router.pathname === "/dashboard"
+                      ? "text-mainColor border-b-2 border-mainColor"
+                      : "text-black hover:text-mainColor"
+                  }`}
                 >
                   {t("dashboard")}
                 </Link>
@@ -686,7 +694,11 @@ const Navbar = () => {
             {/* <LanguageSelector /> */}
             <Link
               href="/ai-resume-builder"
-              className="text-black hover:text-mainColor px-3 py-2 rounded-md text-lg font-semibold"
+              className={`px-3 py-2  text-lg font-semibold transition-colors ${
+                router.pathname === "/ai-resume-builder"
+                  ? "text-mainColor border-b-2 border-mainColor"
+                  : "text-black hover:text-mainColor"
+              }`}
             >
               {t("ai_resume_builder")}
             </Link>
@@ -698,7 +710,11 @@ const Navbar = () => {
             </Link> */}
             <Link
               href="https://blog.rewritecanada.ca/"
-              className="text-black hover:text-mainColor px-3 py-2 rounded-md text-lg font-semibold"
+              className={`px-3 py-2  text-lg font-semibold transition-colors ${
+                router.pathname === "https://blog.rewritecanada.ca/"
+                  ? "text-mainColor border-b-2 border-mainColor"
+                  : "text-black hover:text-mainColor"
+              }`}
             >
               {t("resources")}
             </Link>
@@ -722,7 +738,7 @@ const Navbar = () => {
                   <img
                     src={
                       photo
-                        ? `https://api.createmyresume.in${photo}`
+                        ? `https://api.rewritecanada.ca${photo}`
                         : "https://img.freepik.com/premium-vector/businessman-avatar-illustration-cartoon-user-portrait-user-profile-icon_118339-4382.jpg"
                     }
                     alt="User"
@@ -790,12 +806,12 @@ const Navbar = () => {
               </div>
             ) : (
               <>
-                <Link
-                  href="/login2"
-                  className="bg-black hover:bg-mainColor text-white  px-4 py-2 text-md font-semibold border-2 rounded-xl"
-                >
-                  {t("login")}
+                <Link href="/login2">
+                  <Button className=" bg-mainColor text-white ">
+                    {t("login")}
+                  </Button>
                 </Link>
+
                 {/* <Link
                   href="/signup"
                   className="bg-mainColor text-white  px-4 py-2 text-md font-semibold border-2 rounded-xl"

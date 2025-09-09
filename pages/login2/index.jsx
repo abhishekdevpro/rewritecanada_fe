@@ -272,6 +272,7 @@ import { BASE_URL } from "../../components/Constant/constant";
 import { useTranslation } from "react-i18next";
 import { ResumeContext } from "../../components/context/ResumeContext";
 import GoogleOneTapLogin from "../../components/GoogleOneTapLogin";
+import Button from "../../components/buttonUIComponent";
 const Login2 = () => {
   const { t } = useTranslation();
   const [isThirdstepOpen, setThirdstepOpen] = useState(false);
@@ -360,10 +361,10 @@ const Login2 = () => {
     <>
       <Navbar />
 
-      <div className="flex justify-center items-center h-screen w-full">
+      <div className="flex justify-center items-center h-screen w-full bg-gradient-to-b from-white to-mainColor">
         <div className="p-8 rounded-xl shadow-lg shadow-slate-700 w-full max-w-lg bg-white">
           <div className="flex justify-center mb-6">
-            <Image src={logo} className="w-[200px] h-[100px]" alt="Logo" />
+            <Image src={logo} className="w-[150px] h-[100px]" alt="Logo" />
           </div>
           <div className="text-2xl text-black text-center font-bold mb-4">
             {t("loginpage.welcome")}
@@ -411,26 +412,26 @@ const Login2 = () => {
                 {t("loginpage.agree_terms")}{" "}
                 <Link
                   href="/TermsandConditions"
-                  className="text-emerald-600  underline"
+                  className="text-mainColor  underline"
                 >
                   {t("loginpage.terms_conditions")}
                 </Link>
               </label>
             </div>
 
-            <button
+            <Button
               type="submit"
               // className="w-full bg-blue-950  text-white px-4 py-2 rounded-md hover:bg-blue-950  transition-colors duration-300 relative"
-              className={`w-full text-white px-4 py-2 rounded-md transition-colors duration-300 relative 
+              className={`w-full text-white
                 ${
                   !isChecked || isLoading
                     ? "bg-gray-400 cursor-not-allowed "
-                    : "bg-blue-950  hover:bg-emerald-600"
+                    : "bg-mainColor"
                 }`}
               disabled={!isChecked || isLoading} // Disabled when terms are not checked or loading
             >
               Send Otp
-            </button>
+            </Button>
           </form>
         </div>
       </div>

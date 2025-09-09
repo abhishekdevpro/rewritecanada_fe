@@ -24,7 +24,7 @@ const countries = [
 
 export default function CountrySelection({ onBack, onSelectCountry }) {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-blue-200 flex flex-col">
+    <div className="min-h-screen bg-gradient-to-b from-white to-mainColor flex flex-col">
       <main className="flex-1 flex flex-col items-center px-4 py-10">
         <div className="max-w-3xl text-center mb-10">
           <h1 className="text-3xl md:text-4xl font-bold text-teal-700 hover:text-teal-800 leading-snug mb-2">

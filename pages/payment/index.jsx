@@ -43,7 +43,7 @@
 //   return (
 //     <>
 //       <Navbar />
-//       <div className="p-6 max-w-7xl w-full mx-auto   bg-gradient-to-b from-white to-blue-200">
+//       <div className="p-6 max-w-7xl w-full mx-auto   bg-gradient-to-b from-white to-mainColor">
 //         {/* Intro Section */}
 //         <div className="bg-green-100 p-4 rounded-lg text-center">
 //           <h2 className="text-lg md:text-xl font-semibold">
@@ -316,7 +316,7 @@ export default function Payment() {
   return (
     <>
       <Navbar />
-      <div className="p-6 max-w-7xl w-full mx-auto   bg-gradient-to-b from-white to-blue-200">
+      <div className="p-6 max-w-7xl w-full mx-auto   bg-gradient-to-b from-white to-mainColor">
         {/* Intro Section */}
         <div className="bg-green-100 p-4 rounded-lg text-center">
           <h2 className="text-lg md:text-xl font-semibold">
