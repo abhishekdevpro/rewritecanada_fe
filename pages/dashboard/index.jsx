@@ -15,7 +15,8 @@ import { BASE_URL } from "../../components/Constant/constant";
 import JobSearch from "../JobSearch";
 import { ResumeContext } from "../../components/context/ResumeContext";
 import PricingSection from "../../components/Pricing/PricingPlan";
-import Button from "../../components/ButtonUIComponent";
+import Button from "../../components/buttonUIComponent";
+
 export default function DashboardPage() {
   const { t } = useTranslation();
   const { selectedLang } = useContext(ResumeContext);
