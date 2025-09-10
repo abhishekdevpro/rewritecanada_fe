@@ -282,7 +282,7 @@ function CoverLetterBuilder() {
           {/* Main Content */}
           <div className=" bg-gray-50 ">
             {/* Sticky Options Bar */}
-            <div className="sticky top-[64px] z-40 bg-gray-200 p-4 shadow-sm">
+            <div className="sticky top-[64px] z-20 bg-gray-200 p-4 shadow-sm">
               <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
                 {/* Font Selector and Options */}
                 <div className="flex items-center gap-4">

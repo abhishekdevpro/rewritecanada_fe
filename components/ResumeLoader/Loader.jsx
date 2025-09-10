@@ -54,7 +54,7 @@ const FullScreenLoader = () => {
           </div>
 
           {/* Loading Text */}
-          <h2 className="text-xl font-semibold text-gray-800">
+          <h2 className="text-xl font-semibold text-white">
             {t("analyzingResume.title")}
           </h2>
           <p className="text-gray-600">{t("analyzingResume.description")}</p>
