@@ -309,7 +309,7 @@ function CoverLetterBuilder() {
                   </button>
                   <button
                     onClick={downloadAsPDF}
-                    className="bg-yellow-500 text-black px-6 py-2 rounded-lg"
+                    className="bg-mainColor text-white px-6 py-2 rounded-lg"
                   >
                     {t("cvBuilder.download")}
                   </button>

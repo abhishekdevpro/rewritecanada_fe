@@ -723,7 +723,7 @@ export default function WebBuilder() {
                   <button
                     type="button"
                     onClick={handleNext}
-                    className="w-40 h-10 rounded-lg bg-emerald-600 text-white font-medium transition hover:bg-emerald-600"
+                    className="w-40 h-10 rounded-lg bg-mainColor text-white font-medium transition hover:bg-mainColor"
                   >
                     {currentSection === sections.length - 1
                       ? t("buttons.finish")
@@ -810,18 +810,6 @@ export default function WebBuilder() {
             </div>
 
             <div className="flex flex-col md:flex-row flex-grow ">
-              {/* <aside
-                className={`fixed md:static left-0 top-0 h-full z-10 transform 
-                                
-                                md:translate-x-0 transition-transform duration-300 ease-in-out 
-                                w-64 bg-gray-100 border-r`}
-              >
-                <div className="sticky top-20 p-4 overflow-y-auto h-full">
-                  <div className="mt-12 md:mt-0">
-                    <Sidebar />
-                  </div>
-                </div>
-              </aside> */}
               <div className="flex flex-col md:flex-row flex-grow p-4">
                 <div className="w-[40%]  bg-gray-100">
                   <main className="w-full mx-auto md:p-4">
@@ -854,7 +842,7 @@ export default function WebBuilder() {
           </div>
         ) : (
           <div className=" flex flex-col">
-            <div className="hidden md:flex w-screen px-8 py-4 justify-between items-center bg-white shadow">
+            <div className="hidden md:flex px-8 py-4 justify-between items-center bg-white shadow">
               <div className="flex gap-4 ">
                 {/* <select
                   value={selectedFont}
@@ -899,7 +887,7 @@ export default function WebBuilder() {
 
                 <button
                   onClick={downloadAsPDF}
-                  className="bg-emerald-600 text-white px-6 py-2 rounded-lg"
+                  className="bg-mainColor text-white px-6 py-2 rounded-lg"
                 >
                   {isDownloading ? (
                     <SaveLoader loadingText="Downloading" />
@@ -959,7 +947,7 @@ export default function WebBuilder() {
                         <div className="md:w-1/2 w-full p-4 ">
                           <div className="text-center mb-6">
                             <h2 className="text-2xl font-bold text-gray-900">
-                              ₹49
+                              $49
                             </h2>
                             <p className="text-sm text-gray-500">
                               Total Amount
@@ -1011,7 +999,7 @@ export default function WebBuilder() {
                               <button
                                 onClick={downloadAsPDF}
                                 type="submit"
-                                className="w-full bg-emerald-400 text-black font-bold  rounded-[50px] hover:bg-emerald-600 transition duration-200"
+                                className="w-full bg-emerald-400 text-black font-bold  rounded-[50px] hover:bg-mainColor transition duration-200"
                               >
                                 <Image
                                   src={paypal}

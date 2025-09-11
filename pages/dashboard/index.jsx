@@ -89,7 +89,7 @@ export default function DashboardPage() {
 
   return (
     <>
-      <div className="bg-gradient-to-b from-white to-mainColor">
+      <div className="bg-gradient-to-b from-white to-lightColor">
         <Navbar />
         <div className="flex flex-col sm:flex-row justify-center items-center mb-8 gap-4 mt-4 p-4">
           <Button

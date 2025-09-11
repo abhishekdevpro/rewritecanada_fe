@@ -614,7 +614,7 @@ export default function MobileBuilder() {
         <button
           onClick={handlePrevious}
           disabled={currentSection === 0}
-          className="px-4 py-2 bg-emerald-600 text-white rounded-lg disabled:opacity-50"
+          className="px-4 py-2 bg-mainColor text-white rounded-lg disabled:opacity-50"
         >
           {t("buttons.previous")}
         </button>
@@ -644,7 +644,7 @@ export default function MobileBuilder() {
                 onClick={() => handleSectionClick(index)}
                 className={`w-full p-3 mb-2 rounded-lg text-left ${
                   currentSection === index
-                    ? "bg-emerald-600 text-white"
+                    ? "bg-mainColor text-white"
                     : "bg-gray-100 text-blue-950"
                 }`}
               >
@@ -720,7 +720,7 @@ export default function MobileBuilder() {
             <div className="flex flex-col md:flex-row flex-grow ">
               <button
                 onClick={toggleMobileSidebar}
-                className="fixed z-10 bottom-20 right-4  bg-emerald-600 text-white p-3 rounded-full shadow-lg"
+                className="fixed z-10 bottom-20 right-4  bg-mainColor text-white p-3 rounded-full shadow-lg"
               >
                 {isMobileSidebarOpen ? (
                   <X className="h-6 w-6 stroke-2" />
@@ -829,7 +829,7 @@ export default function MobileBuilder() {
                 </button>
                 <button
                   onClick={handleBackToEditor}
-                  className="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition-colors bottom-btns"
+                  className="bg-mainColor text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition-colors bottom-btns"
                 >
                   {t("buttons.backToDashboard")}
                 </button>

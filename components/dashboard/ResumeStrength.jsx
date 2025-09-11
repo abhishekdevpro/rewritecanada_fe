@@ -342,7 +342,7 @@ const ResumeStrength = ({ score, strength, resumeId }) => {
       </Modal>
 
       <div className="bg-blue-50 p-6 rounded-lg mb-6">
-        <div className="flex justify-between items-start mb-6">
+        <div className="flex flex-col md:flex-row justify-between items-start mb-6 gap-4">
           <div>
             <h2 className="text-xl font-semibold mb-1">
               {" "}
@@ -391,7 +391,7 @@ const ResumeStrength = ({ score, strength, resumeId }) => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {sectionsList.map((section) => {
             const Icon = section.icon;
             const currentScore = section.score || 0;

@@ -175,11 +175,13 @@ function Payment() {
       .then((response) => {
         console.log("Remark submitted successfully:", response.data);
         toast.success(response.data.message || "Remark submitted successfully");
-        
+
         // Update the user data to reflect the new remark
-        setUsers(users.map(user => 
-          user.id === Id ? {...user, remark: remark} : user
-        ));
+        setUsers(
+          users.map((user) =>
+            user.id === Id ? { ...user, remark: remark } : user
+          )
+        );
       })
       .catch((error) => {
         console.error("Error submitting remark:", error);
@@ -190,7 +192,9 @@ function Payment() {
   return (
     <div className="container mx-auto p-4">
       <div className="bg-gradient-to-r from-pink-500 to-pink-700 p-6 rounded-lg shadow-lg mb-8">
-        <h2 className="text-start text-3xl text-white font-bold">Payment History</h2>
+        <h2 className="text-start text-3xl text-white font-bold">
+          Payment History
+        </h2>
       </div>
 
       {loading ? (
@@ -213,8 +217,12 @@ function Payment() {
               d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
             ></path>
           </svg>
-          <h3 className="text-xl font-semibold text-gray-800 mb-2">No Payment History Found</h3>
-          <p className="text-gray-600">There are no payment records available at this time.</p>
+          <h3 className="text-xl font-semibold text-gray-800 mb-2">
+            No Payment History Found
+          </h3>
+          <p className="text-gray-600">
+            There are no payment records available at this time.
+          </p>
         </div>
       ) : (
         <div className="overflow-x-auto bg-white rounded-lg shadow-lg">
@@ -249,8 +257,8 @@ function Payment() {
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
               {users.map((user, index) => (
-                <tr 
-                  key={index} 
+                <tr
+                  key={index}
                   className={index % 2 === 0 ? "bg-white" : "bg-pink-50"}
                 >
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
@@ -266,13 +274,19 @@ function Payment() {
                     {user.phone || "N/A"}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                    ₹{user.amount || "0"}
+                    ${user.amount || "0"}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <span className={`px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full 
-                      ${user.status === "Completed" ? "bg-green-100 text-green-800" : 
-                        user.status === "Pending" ? "bg-yellow-100 text-yellow-800" : 
-                        "bg-red-100 text-red-800"}`}>
+                    <span
+                      className={`px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full 
+                      ${
+                        user.status === "Completed"
+                          ? "bg-green-100 text-green-800"
+                          : user.status === "Pending"
+                          ? "bg-yellow-100 text-yellow-800"
+                          : "bg-red-100 text-red-800"
+                      }`}
+                    >
                       {user.status || "N/A"}
                     </span>
                   </td>
@@ -281,14 +295,20 @@ function Payment() {
                       type="text"
                       className="border border-gray-300 rounded-md p-2 w-full text-sm focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
                       placeholder="Add remark..."
-                      value={remarks[user.id] !== undefined ? remarks[user.id] : (user.remark || "")}
-                      onChange={(e) => handleRemarkChange(user.id, e.target.value)}
+                      value={
+                        remarks[user.id] !== undefined
+                          ? remarks[user.id]
+                          : user.remark || ""
+                      }
+                      onChange={(e) =>
+                        handleRemarkChange(user.id, e.target.value)
+                      }
                     />
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                     <button
                       onClick={() => handleRemarkSubmit(user.id)}
-                      className="bg-gradient-to-r from-pink-500 to-pink-700 hover:from-pink-600 hover:to-pink-800 text-white px-4 py-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-opacity-50"
+                      className="bg-gradient-to-r from-pink-500 to-pink-700 hover:from-mainsecondColor hover:to-pink-800 text-white px-4 py-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-opacity-50"
                     >
                       Submit
                     </button>

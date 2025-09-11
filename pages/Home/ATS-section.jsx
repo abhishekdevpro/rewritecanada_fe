@@ -19,7 +19,7 @@ const ATSResumeSection = () => {
         {/* Main Content */}
         <div className="flex flex-col lg:flex-row lg:justify-between bg-white shadow-2xl rounded-lg overflow-hidden">
           {/* Image Section */}
-          <div className="flex justify-center lg:justify-start p-4 lg:p-0">
+          <div className="flex justify-start lg:justify-start p-4 lg:p-0">
             <Image
               src={ats}
               height={150}

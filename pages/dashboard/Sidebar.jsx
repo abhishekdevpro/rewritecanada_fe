@@ -312,7 +312,7 @@ const Sidebar = ({ onClose }) => {
         <li>
           <Link
             href="/dashboard"
-            className="flex items-center p-2 bg-emerald-600 border-b-2 border-blue-950 font-semibold text-white"
+            className="flex items-center p-2 bg-mainColor border-b-2 border-blue-950 font-semibold text-white"
             onClick={onClose}
           >
             <span className="mr-10">🖥️</span>
@@ -432,7 +432,7 @@ const Sidebar = ({ onClose }) => {
         <li>
           <Link
             href="/"
-            className="flex items-center p-2 hover:bg-blue-950 border-b-2 rounded font-semibold"
+            className="flex items-center p-2 hover:bg-blue-950 border-b-2  hover:text-white rounded font-semibold"
             onClick={() => {
               handleLogout();
             }}

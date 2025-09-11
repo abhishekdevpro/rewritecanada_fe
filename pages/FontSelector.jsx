@@ -58,7 +58,9 @@ const FontSelector = () => {
     <select
       value={selectedFont}
       onChange={(e) => setSelectedFont(e.target.value)}
-      className="w-40 h-10 rounded-lg border border-teal-600 px-4 font-bold text-teal-600 bg-white focus:ring-2 focus:ring-teal-600"
+      // className="w-40 h-10 rounded-lg border border-mainColor px-4 font-bold text-mainColor bg-white focus:ring-2 focus:ring-mainColor"
+      className="rounded-lg border-2 border-mainColor px-4 py-2 bg-white text-mainColor font-medium 
+    transition-transform duration-200 ease-in-out hover:scale-[1.02] hover:bg-lightColor hover:text-mainColor flex items-center gap-2"
     >
       {fonts.map((font) => (
         <option key={font} value={font}>

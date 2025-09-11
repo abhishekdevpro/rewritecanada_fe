@@ -98,7 +98,8 @@ const TemplateSelector = ({
     <div className="">
       <button
         onClick={openModal}
-        className="hidden md:block rounded-lg border-2 m-2 border-green-500 px-5 py-2 font-bold bg-white text-black"
+        className="hidden md:block rounded-lg border-2 border-mainColor px-4 py-2 bg-white text-mainColor font-bold 
+    transition-transform duration-200 ease-in-out hover:scale-[1.02] hover:bg-lightColor hover:text-mainColor flex items-center gap-2"
       >
         <span>
           {t("templateSelector.selectedTemplate", {
@@ -108,13 +109,13 @@ const TemplateSelector = ({
       </button>
       <button
         onClick={openModal}
-        className="block md:hidden rounded-lg border-2 m-2 border-pink-600 px-5 py-2 font-bold bg-white text-pink-600"
+        className="block md:hidden rounded-lg border-2 m-2 border-mainsecondColor px-5 py-2 font-bold bg-white text-mainsecondColor"
       >
         {t("templateSelector.templateButton")}
       </button>
 
       {isOpen && (
-        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black/75 p-4">
+        <div className="fixed inset-0 flex items-center justify-center z-50 mt-20 bg-black/75 p-4">
           <div className="bg-white rounded-xl p-6 w-full max-w-5xl relative shadow-2xl">
             <button
               onClick={closeModal}

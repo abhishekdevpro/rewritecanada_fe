@@ -54,13 +54,14 @@ const MobileCoverLetterBuilder = ({
         // Preview Mode
         <div className="flex flex-col min-h-screen bg-gray-50">
           {/* Sticky Options Bar */}
-          <div className="sticky top-[64px] z-40 bg-gray-200 p-4 shadow-sm">
+          <div className="sticky top-[64px] z-20 bg-gray-200 p-4 shadow-sm">
             <div className="flex items-center absolute justify-center gap-2 p-2  top-26 left-0 right-0 bg-white shadow-lg ">
               {/* Font Selector */}
               <select
                 value={selectedFont}
                 onChange={handleFontChange}
-                className=" h-10 rounded-lg border border-green-500 px-4 font-bold text-black bg-white"
+                className="rounded-lg border-2 border-mainColor px-4 py-2 bg-white text-mainColor font-bold 
+    transition-transform duration-200 ease-in-out hover:scale-[1.02] hover:bg-lightColor hover:text-mainColor flex items-center gap-2"
               >
                 <option value="Ubuntu">Ubuntu</option>
                 <option value="Calibri">Calibri</option>
@@ -112,7 +113,7 @@ const MobileCoverLetterBuilder = ({
             </button>
             <button
               onClick={downloadAsPDF}
-              className="w-full flex items-center justify-center gap-2 bg-pink-600 text-white px-6 py-3 rounded-lg"
+              className="w-full flex items-center justify-center gap-2 bg-mainsecondColor text-white px-6 py-3 rounded-lg"
             >
               <Download size={20} />
               {/* Download */}

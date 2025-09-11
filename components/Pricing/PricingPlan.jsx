@@ -245,7 +245,7 @@ const PricingSection = () => {
                   <span className="text-3xl font-bold text-white">
                     {Number(t(`pricing.${planType}.price`)) === 0
                       ? t("pricing.freeLabel")
-                      : `₹${t(`pricing.${planType}.price`)}`}
+                      : `$${t(`pricing.${planType}.price`)}`}
                   </span>
                   {t(`pricing.${planType}.billingCycle`) && (
                     <span className="text-white ml-1 text-sm">

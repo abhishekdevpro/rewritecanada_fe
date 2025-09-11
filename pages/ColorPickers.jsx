@@ -250,8 +250,8 @@ const ColorPicker = ({ selectedColor, onChange }) => {
     <div className="relative flex items-center m-2 z-20 ">
       <button
         onClick={handleToggleDropdown}
-        className="rounded-lg border-2 border-teal-600 px-4 py-2 bg-white text-teal-600 font-medium 
-    transition-transform duration-200 ease-in-out hover:scale-[1.02] hover:bg-teal-50 hover:text-teal-600 flex items-center gap-2"
+        className="rounded-lg border-2 border-mainColor px-4 py-2 bg-white text-mainColor font-medium 
+    transition-transform duration-200 ease-in-out hover:scale-[1.02] hover:bg-lightColor hover:text-mainColor flex items-center gap-2"
       >
         <Palette size={18} />
         <span className="hidden md:inline">Color Theme</span>
@@ -303,7 +303,7 @@ const ColorPicker = ({ selectedColor, onChange }) => {
                   onClick={() => handleColorSelect(color.value)}
                   className={`w-8 h-8 rounded-full cursor-pointer border transition-all duration-300 ease-in-out ${
                     isSelected
-                      ? "border-blue-500 shadow-md shadow-blue-500 scale-110"
+                      ? "border-mainColor shadow-md shadow-mainColor scale-110"
                       : "border-gray-300"
                   } hover:border-black`}
                   style={hoverStyle}

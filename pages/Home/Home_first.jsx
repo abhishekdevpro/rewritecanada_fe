@@ -185,9 +185,9 @@ function Home_first() {
             </Link> */}
           </div>
 
-          <div className="py-9 flex gap-3 md:gap-10 md:justify-evenly items-center flex-col md:flex-row">
+          <div className="py-9 flex flex-col md:flex-row  md:justify-between items-center px-6">
             {/* Content Section */}
-            <div className="px-3 py-3 w-full md:w-[500px]">
+            <div className="px-3 py-3 w-full md:w-[600px]">
               <div className="inline-block md:inline-block w-full md:w-fit text-center md:text-left rounded-full bg-lightColor text-mainColor px-4 py-2 mb-6">
                 <div className="flex items-center justify-center md:justify-start gap-2">
                   <Image
@@ -262,8 +262,8 @@ function Home_first() {
 
             {/* Image Slider Section */}
             <div className="px-6 py-3">
-              <div className="hidden md:block md:max-w-lg p-4">
-                <Image src={banner} alt="banner" height={400} width={400} />
+              <div className="block max-w-lg p-4 mx-auto">
+                <Image src={banner} alt="banner" height={500} width={500} />
               </div>
             </div>
           </div>

@@ -36,7 +36,7 @@ export default function UploadStep({ onNext, onBack, onChange, value }) {
         <p className="mt-2 text-white">{t("cvUploadStep.subtitle")}</p>
       </div>
 
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center ">
         <button
           onClick={handleStartFromScratch}
           className="p-6 border-2 rounded-lg text-center hover:border-blue-400"
@@ -53,7 +53,7 @@ export default function UploadStep({ onNext, onBack, onChange, value }) {
         </button>
       </div>
 
-      <div className="flex justify-between mt-8">
+      <div className="flex justify-between mt-8 p-4">
         <button
           onClick={onBack}
           className="px-6 py-2 border rounded-lg hover:bg-gray-50"

@@ -4,6 +4,9 @@ import { useTranslation } from "react-i18next";
 import { ResumeContext } from "../../../components/context/ResumeContext";
 import axiosInstance from "../../../components/utils/axiosInstance";
 import Button from "../../../components/buttonUIComponent";
+import Image from "next/image";
+import message from "../../../public/assets/messages_iocn.png";
+import email from "../../../public/assets/email_icon.png";
 const ContactUs = () => {
   const [isFormVisible, setIsFormVisible] = useState(false);
   const [formData, setFormData] = useState({
@@ -220,48 +223,13 @@ const ContactUs = () => {
             )}
           </div>
         </div> */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-8 max-w-4xl mx-auto">
-          {/* <div className="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg p-6 flex-grow max-w-md">
+        <div className="flex flex-col md:flex-row items-stretch justify-center gap-8 max-w-4xl mx-auto">
+          <div className="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg p-6 flex-1 max-w-md min-h-[250px]">
             <div className="flex items-center mb-4">
-              <div className="text-3xl"> 📞</div>
-              <h5 className="ml-3 text-slate-800 text-xl font-semibold">
-                {t("contact_us")}
-              </h5>
-            </div>
-            <p className="text-slate-600 font-semibold mb-1">
-              {t("we_are_here")}
-            </p>
-            <p className="text-slate-600 font-light mb-4 text-sm">
-              {t("contact_anytime")}
-            </p>
-            <div>
-              <button className="border px-3 py-2 rounded-lg">
-                <a
-                  href="tel:0625782947"
-                  className="text-slate-800 font-semibold text-sm hover:underline flex items-center"
-                >
-                  0625782947
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="ml-2 h-4 w-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    />
-                  </svg>
-                </a>
-              </button>
-            </div>
-          </div> */}
-          <div className="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg p-6 flex-grow max-w-md">
-            <div className="flex items-center mb-4">
-              <div className="text-3xl">✉</div>
+              <div className="text-3xl">
+                {/* ✉ */}
+                <Image src={email} alt="email-icon" height={30} width={30} />
+              </div>
               <h5 className="ml-3 text-slate-800 text-xl font-semibold">
                 {t("email_us")}
               </h5>
@@ -273,7 +241,7 @@ const ContactUs = () => {
               {t("contact_anytime")} -{" "}
               <span className="font-bold">&quot;Dummy&quot;</span>
             </p>
-            <div>
+            <div className="mt-auto">
               <Button className="bg-mainColor text-white">
                 <a
                   href="mailto:dummy@rewritecanada.ca"
@@ -299,9 +267,17 @@ const ContactUs = () => {
             </div>
           </div>
 
-          <div className="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg p-6 flex-grow max-w-md">
+          <div className="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg p-6 flex-1 max-w-md min-h-[250px]">
             <div className="flex items-center mb-4">
-              <div className="text-3xl">🗨</div>
+              <div className="text-3xl">
+                {/* 🗨 */}
+                <Image
+                  src={message}
+                  alt="message-icon"
+                  height={30}
+                  width={30}
+                />
+              </div>
               <h5 className="ml-3 text-slate-800 text-xl font-semibold">
                 {t("message_us")}
               </h5>
@@ -312,34 +288,39 @@ const ContactUs = () => {
             <p className="text-slate-600 font-light mb-4 text-sm">
               {t("reach_out")}
             </p>
-            <Button
-              className="bg-mainColor text-white"
-              // onClick={() =>
-              //   window.open(
-              //     "https://wa.me/918910082347",
-              //     "_blank",
-              //     "noopener,noreferrer"
-              //   )
-              // }
-            >
-              <span className="text-white font-semibold text-sm hover:underline flex items-center">
-                {t("chat")}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="ml-2 h-4 w-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
+            <div className="mt-auto">
+              <Button
+                className="bg-mainColor text-white"
+                // onClick={() =>
+                //   window.open(
+                //     "https://wa.me/918910082347",
+                //     "_blank",
+                //     "noopener,noreferrer"
+                //   )
+                // }
+              >
+                <a
+                  href="https://wa.me/9"
+                  className="text-white font-semibold text-sm hover:underline flex items-center"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M14 5l7 7m0 0l-7 7m7-7H3"
-                  />
-                </svg>
-              </span>
-            </Button>
+                  {t("chat")}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="ml-2 h-4 w-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    />
+                  </svg>
+                </a>
+              </Button>
+            </div>
 
             {isFormVisible && (
               <div className="bg-white shadow-md border rounded-lg p-6 w-full mt-4 z-10">

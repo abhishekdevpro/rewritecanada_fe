@@ -34,14 +34,14 @@ export default function PaymentPage() {
     if (price === "0") return t("pricing.freeLabel");
 
     if (billingCycle === "single") {
-      return `₹${price}`;
+      return `$${price}`;
     } else if (billingCycle === "month") {
-      return `₹${price}/${t("plans.mo")}`;
+      return `$${price}/${t("plans.mo")}`;
     } else if (billingCycle === "year") {
-      return `₹${price}/${t("plans.yr")}`;
+      return `$${price}/${t("plans.yr")}`;
     }
 
-    return `₹${price}`;
+    return `$${price}`;
   };
 
   const getRenewalText = (planKey) => {

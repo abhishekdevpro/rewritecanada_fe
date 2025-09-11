@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import { Trash2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import axiosInstance from "../../components/utils/axiosInstance";
+import Button from "../../components/buttonUIComponent";
 const ProfileForm = () => {
   const { i18n, t } = useTranslation();
   const language = i18n.language;
@@ -493,12 +494,9 @@ const ProfileForm = () => {
               />
             </div>
           </div>
-          <button
-            type="submit"
-            className="w-full bg-emerald-600 text-white p-2 rounded"
-          >
+          <Button type="submit" className="w-full bg-mainColor text-white ">
             {t("update_profile")}
-          </button>
+          </Button>
         </form>
       </div>
     </div>

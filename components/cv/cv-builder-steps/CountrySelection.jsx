@@ -46,7 +46,7 @@ export default function CountrySelection({ onBack, onSelectCountry }) {
               <button
                 key={country.id}
                 onClick={() => onSelectCountry(country.id)}
-                className="p-5 rounded-2xl shadow-md border border-gray-200 bg-teal-200 hover:bg-blue-950 hover:text-white hover:shadow-xl flex flex-col items-center transition-all duration-200 group"
+                className="p-5 rounded-2xl shadow-md border border-gray-200 bg-lightColor hover:bg-mainColor hover:text-white hover:shadow-xl flex flex-col items-center transition-all duration-200 group"
               >
                 <Image
                   src={country.flag}
@@ -58,7 +58,7 @@ export default function CountrySelection({ onBack, onSelectCountry }) {
                 <span className="text-teal-700 group-hover:text-white font-semibold text-lg mb-2 transition-colors duration-200">
                   {country.name}
                 </span>
-                <span className="text-xl text-gray-400 group-hover:text-black transition-colors duration-200">
+                <span className="text-xl text-white group-hover:text-white transition-colors duration-200">
                   →
                 </span>
               </button>

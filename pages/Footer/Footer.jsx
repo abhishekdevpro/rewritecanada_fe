@@ -209,10 +209,10 @@ import { toast } from "react-toastify";
 import { ResumeContext } from "../../components/context/ResumeContext";
 import axiosInstance from "../../components/utils/axiosInstance";
 import SupportPopup from "./supportpopup";
+import github from "../../public/assets/footer_icon1.png";
 import fb from "../../public/assets/footer_icon2.png";
 import insta from "../../public/assets/footer_icon3.png";
 import twitter from "../../public/assets/footer_icon4.png";
-import github from "../../public/assets/footer_icon2.png";
 import bg1 from "../../public/assets/footer-bg1.png";
 import bg2 from "../../public/assets/footer-bg2.png";
 const Footer = () => {
@@ -256,20 +256,24 @@ const Footer = () => {
           {/* Newsletter Section */}
           <div className="relative bg-mainColor rounded-xl md:rounded-2xl p-6 md:p-12 flex flex-col items-center justify-center text-center">
             <div>
-              <Image className="absolute top-0 left-0" src={bg1} alt="bg1" />
               <Image
-                className="absolute bottom-0 right-0"
+                className="absolute top-0 left-0 z-0"
+                src={bg1}
+                alt="bg1"
+              />
+              <Image
+                className="absolute bottom-0 right-0 z-0"
                 src={bg2}
                 alt="bg2"
               />
             </div>
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-white mb-4 md:mb-6">
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-white mb-4 md:mb-6 relative z-10">
               Subscribe to our newsletter
             </h2>
 
             <form
               onSubmit={handleSubmit}
-              className="flex flex-col sm:flex-row items-center gap-3 md:gap-4 w-full max-w-2xl"
+              className="flex flex-col sm:flex-row items-center gap-3 md:gap-4 w-full max-w-2xl relative z-10"
             >
               <input
                 type="email"

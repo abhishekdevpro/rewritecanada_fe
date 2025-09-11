@@ -169,8 +169,8 @@ const TemplateSelector = ({
       <div className="flex flex-col md:flex-row gap-2 m-2">
         <button
           onClick={openModal}
-          className="flex items-center gap-2 rounded-lg border-2 border-teal-600 px-5 py-2 bg-white text-teal-600 font-medium 
-    transition-transform duration-200 ease-in-out hover:scale-[1.02] hover:bg-blue-50 hover:text-teal-6000"
+          className="rounded-lg border-2 border-mainColor px-4 py-2 bg-white text-mainColor font-medium 
+    transition-transform duration-200 ease-in-out hover:scale-[1.02] hover:bg-lightColor hover:text-mainColor flex items-center gap-2"
         >
           <FileText size={18} />
           <span className="hidden md:inline">
