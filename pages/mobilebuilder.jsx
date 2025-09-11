@@ -24,7 +24,7 @@ import { toast } from "react-toastify";
 import LoaderButton from "../components/utility/LoaderButton";
 import useLoader from "../hooks/useLoader";
 
-import { Menu, X } from "lucide-react";
+import { Menu, X, Save, Download, ArrowLeft } from "lucide-react";
 import Image from "next/image";
 import resumeImg from "./builderImages/GraphicDesignerResume.jpg";
 import poweredbypaypal from "./builderImages/poweredbypaypal.png";
@@ -803,35 +803,37 @@ export default function MobileBuilder() {
                 <LoaderButton
                   isLoading={isLoading}
                   onClick={handleClick}
-                  className=" text-white bg-red-500 px-4 py-2 text- rounded-lg bottom-btns"
+                  className=" text-white bg-red-500 px-4 py-2 text- rounded-lg bottom-btns flex items-center gap-2"
                 >
                   {loading === "save" ? (
                     <SaveLoader loadingText={t("buttons.saving")} />
                   ) : (
-                    t("buttons.save")
+                    <>
+                      <Save className="w-4 h-4" />
+                      {/* {t("buttons.save")} */}
+                    </>
                   )}
                 </LoaderButton>
 
                 <button
                   onClick={downloadAsPDF}
-                  className=" bg-blue-950 text-white px-4 py-2 rounded-lg bottom-btns"
+                  className=" bg-blue-950 text-white px-4 py-2 rounded-lg bottom-btns flex items-center gap-2"
                 >
-                  {/* {loading === "download" ? (
-                    <SaveLoader loadingText={t("buttons.downloading")} />
-                  ) : (
-                    t("buttons.download")
-                  )} */}
                   {isDownloading ? (
                     <SaveLoader loadingText="Downloading" />
                   ) : (
-                    "Download"
+                    <>
+                      <Download className="w-4 h-4" />
+                      {/* Download */}
+                    </>
                   )}
                 </button>
                 <button
                   onClick={handleBackToEditor}
-                  className="bg-mainColor text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition-colors bottom-btns"
+                  className="bg-mainColor text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition-colors bottom-btns flex items-center gap-2"
                 >
-                  {t("buttons.backToDashboard")}
+                  <ArrowLeft className="w-4 h-4" />
+                  {/* {t("buttons.backToDashboard")} */}
                 </button>
                 {/* <PayAndDownload
                   resumeId={resumeId}
