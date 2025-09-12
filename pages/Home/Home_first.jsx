@@ -187,7 +187,7 @@ function Home_first() {
 
           <div className="py-9 flex flex-col md:flex-row  md:justify-between items-center px-6">
             {/* Content Section */}
-            <div className="px-3 py-3 w-full md:w-[600px]">
+            <div className="px-3 py-3 w-full md:w-[650px]">
               <div className="inline-block md:inline-block w-full md:w-fit text-center md:text-left rounded-full bg-lightColor text-mainColor px-4 py-2 mb-6">
                 <div className="flex items-center justify-center md:justify-start gap-2">
                   <Image
@@ -212,22 +212,24 @@ function Home_first() {
                     &quot;Rewrite Canada&quot;
                   </span>
                 </div> */}
-                <div className="text-2xl md:text-5xl font-bold leading-tight">
-                  Introducing Our{" "}
-                  <span className="text-gray-800 font-normal block mt-2">
-                    Smart AI-Powered Resume Builder
-                  </span>
-                  <span className="block mt-2 text-mainColor font-extrabold">
+                <h1 className="text-2xl md:text-5xl font-bold leading-tight">
+                  Introducing Our Smart AI-
+                </h1>
+                <h1 className="text-2xl md:text-5xl font-bold leading-tight">
+                  Powered Resume Builder
+                </h1>
+                <h1 className="text-2xl md:text-5xl font-bold leading-tight">
+                  <span className="block  text-mainColor font-extrabold">
                     &quot;Rewrite Canada&quot;
                   </span>
-                </div>
+                </h1>
 
                 <div className="text-lg font-medium text-slate-700">
                   Score, upgrade, and apply – the smarter way to job search
                   starts now.
                 </div>
 
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-wrap gap-4 mt-8">
                   <Link
                     href={
                       isAuthenticated ? "/dashboard/resume-builder" : "/login2"
