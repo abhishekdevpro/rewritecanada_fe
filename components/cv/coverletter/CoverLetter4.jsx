@@ -7,6 +7,7 @@ import LetterDetailsWrapper from "./LetterDetailsWrapper";
 import IntroductionBodyWrapper from "./IntroductionBodyWrapper";
 import ImageWrapper from "./ImageWrapper";
 import SocialInfo from "./SocialInfo";
+import CommonFooter from "../../commonFooter/Footer";
 
 const CoverLetter4 = () => {
   const { coverLetterData, backgroundColorss, selectedFont } =
@@ -78,6 +79,9 @@ const CoverLetter4 = () => {
         headerColor={backgroundColorss ? "white" : "black"}
         className="px-8 mt-2"
       />
+      <div>
+        <CommonFooter />
+      </div>
     </div>
   );
 };

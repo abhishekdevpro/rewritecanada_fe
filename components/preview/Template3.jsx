@@ -35,6 +35,7 @@ import ContactAndSocialMedia from "./ContactAndSocial";
 import { SkillsWrapper } from "./SkillWrapper";
 import WorkExperience from "./WorkExperience";
 import ProjectsSection from "./ProjectSection";
+import CommonFooter from "../commonFooter/Footer";
 
 // Importing draggable components dynamically
 const DragDropContext = dynamic(
@@ -146,6 +147,9 @@ const Template3 = () => {
         hasBullet={false}
         headerColor={"black"}
       />
+      <div>
+        <CommonFooter />
+      </div>
     </div>
   );
 };

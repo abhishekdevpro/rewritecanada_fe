@@ -462,6 +462,7 @@ import ContactAndSocialMedia from "./ContactAndSocial";
 import { SkillsWrapper } from "./SkillWrapper";
 import WorkExperience from "./WorkExperience";
 import ProjectsSection from "./ProjectSection";
+import CommonFooter from "../commonFooter/Footer";
 
 const Template2 = () => {
   const {
@@ -555,6 +556,9 @@ const Template2 = () => {
         languages={resumeData.languages}
         headerColor={"black"}
       />
+      <div>
+        <CommonFooter />
+      </div>
     </div>
   );
 };

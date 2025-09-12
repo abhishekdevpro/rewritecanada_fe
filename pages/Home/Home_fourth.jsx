@@ -4,34 +4,32 @@ import Button from "../../components/buttonUIComponent";
 const Home_fourth = () => {
   const blogs = [
     {
-      img: "https://blog.rewritecanada.ca/wp-content/uploads/2025/06/Let-AI-Identify-and-Highlight-Your-Strengths-in-Your-Resume-Blog-9.png",
-      title:
-        "Unlock Hidden Skills: Let AI Identify and Highlight Your Strengths in Your Resume",
+      img: "https://blog.rewritecanada.ca/wp-content/uploads/2025/09/rewrite_blog_img3.png",
+      title: "Why Everyone Deserves Access to Easy Resume Support at No Cost",
       author: "Rewrite Canada",
       date: "June 10, 2025",
       excerpt:
         "Discover how AI can uncover hidden strengths in your resume and help you stand out to employers.",
-      link: "https://blog.rewritecanada.ca/2025/06/10/unlock-hidden-skills-let-ai-identify-and-highlight-your-strengths-in-your-resume/",
+      link: "https://blog.rewritecanada.ca/?p=16",
     },
     {
-      img: "https://blog.rewritecanada.ca/wp-content/uploads/2025/06/How-AI-Optimizes-Your-Resume-for-Success-Blog-3.jpeg",
+      img: "https://blog.rewritecanada.ca/wp-content/uploads/2025/09/rewrite_blog_img2.png",
       title:
-        "Beat the Applicant Tracking System (ATS): How AI Optimizes Your Resume for Success",
+        "From Upload to Download: How Rewrite Canada Simplifies the Resume Journey",
       author: "Rewrite Canada",
       date: "June 10, 2025",
       excerpt:
         "Learn how AI can make your resume ATS-friendly and boost your chances of landing interviews.",
-      link: "https://blog.rewritecanada.ca/2025/06/10/beat-the-applicant-tracking-system-ats-how-ai-optimizes-your-resume-for-success/",
+      link: "https://blog.rewritecanada.ca/?p=13",
     },
     {
-      img: "https://blog.rewritecanada.ca/wp-content/uploads/2025/06/AI-Driven-Insights-for-a-Winning-Resume-Strategy-Blog-5.png",
-      title:
-        "Stop Guessing, Start Landing: AI-Driven Insights for a Winning Resume Strategy",
+      img: "https://blog.rewritecanada.ca/wp-content/uploads/2025/09/blog_img1.png",
+      title: "Why Resume Simplicity Matters",
       author: "Rewrite Canada",
       date: "June 10, 2025",
       excerpt:
         "AI-driven resume insights can guide you to create a winning strategy and secure more job offers.",
-      link: "https://blog.rewritecanada.ca/2025/06/10/stop-guessing-start-landing-ai-driven-insights-for-a-winning-resume-strategy/",
+      link: "https://blog.rewritecanada.ca/?p=7",
     },
     // {
     //   img: "https://blog.rewritecanada.ca/wp-content/uploads/2025/06/The-Power-of-AI-in-Crafting-Your-Perfect-Resume-2-1-1536x864.png",

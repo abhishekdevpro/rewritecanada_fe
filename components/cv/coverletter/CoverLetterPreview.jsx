@@ -6,6 +6,7 @@ import CoverLetter2 from "./CoverLetter2";
 import CoverLetter4 from "./CoverLetter4";
 import { CoverLetterContext } from "../../context/CoverLetterContext";
 import CoverLetter5 from "./CoverLetter5";
+import CommonFooter from "../../commonFooter/Footer";
 
 // function CoverLetterPreview({ selectedTemplate }) {
 const CoverLetterPreview = forwardRef(({ selectedTemplate }, ref) => {
@@ -47,6 +48,9 @@ const A4PageWrapper = ({ children }) => {
   return (
     <div className="a4-wrapper" onLoad={alertA4Size}>
       {children}
+      <div>
+        <CommonFooter />
+      </div>
     </div>
   );
 };

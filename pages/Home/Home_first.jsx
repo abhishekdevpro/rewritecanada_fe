@@ -174,7 +174,7 @@ function Home_first() {
 
   return (
     <>
-      <div className=" bg-white pt-10 w-full overflow-hidden">
+      <div className=" bg-lightColor/10 pt-10 w-full overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-center md:hidden">
             {/* <Link
@@ -188,7 +188,7 @@ function Home_first() {
           <div className="py-9 flex flex-col md:flex-row  md:justify-between items-center px-6">
             {/* Content Section */}
             <div className="px-3 py-3 w-full md:w-[650px]">
-              <div className="inline-block md:inline-block w-full md:w-fit text-center md:text-left rounded-full bg-lightColor text-mainColor px-4 py-2 mb-6">
+              <div className="inline-block md:inline-block w-full md:w-fit text-center md:text-left rounded-full bg-lightColor/25 text-mainColor px-4 py-2 mb-6">
                 <div className="flex items-center justify-center md:justify-start gap-2">
                   <Image
                     src={dollar}

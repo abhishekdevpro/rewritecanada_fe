@@ -35,6 +35,7 @@ import { SkillsWrapper } from "./SkillWrapper";
 import WorkExperience from "./WorkExperience";
 import ProjectsSection from "./ProjectSection";
 import EducationSection from "./Education";
+import CommonFooter from "../commonFooter/Footer";
 // Importing draggable components dynamically
 const DragDropContext = dynamic(
   () => import("react-beautiful-dnd").then((mod) => mod.DragDropContext),
@@ -157,6 +158,9 @@ const Template26 = () => {
           languages={resumeData.languages}
           headerColor={"black"}
         />
+      </div>
+      <div>
+        <CommonFooter />
       </div>
     </div>
   );

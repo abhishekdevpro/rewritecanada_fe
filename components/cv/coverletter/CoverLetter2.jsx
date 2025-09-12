@@ -7,8 +7,9 @@ import LetterDetailsWrapper from "./LetterDetailsWrapper";
 import IntroductionBodyWrapper from "./IntroductionBodyWrapper";
 import SocialInfo from "./SocialInfo";
 import ImageWrapper from "./ImageWrapper";
+import CommonFooter from "../../commonFooter/Footer";
 
-const CoverLetter3 = () => {
+const CoverLetter2 = () => {
   const { coverLetterData, backgroundColorss, selectedFont } =
     useContext(CoverLetterContext);
 
@@ -79,8 +80,11 @@ const CoverLetter3 = () => {
           </div>
         </div>
       </div>
+      <div>
+        <CommonFooter />
+      </div>
     </div>
   );
 };
 
-export default CoverLetter3;
+export default CoverLetter2;

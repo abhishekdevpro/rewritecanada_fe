@@ -24,6 +24,7 @@ import { SkillsWrapper } from "./SkillWrapper";
 import WorkExperience from "./WorkExperience";
 import ProjectsSection from "./ProjectSection";
 import EducationSection from "./Education";
+import CommonFooter from "../commonFooter/Footer";
 
 const Template6 = () => {
   const {
@@ -148,6 +149,9 @@ const Template6 = () => {
           </div>
         </div>
       </section>
+      <div>
+        <CommonFooter />
+      </div>
     </div>
   );
 };

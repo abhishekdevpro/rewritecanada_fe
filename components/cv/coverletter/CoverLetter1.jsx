@@ -7,6 +7,7 @@ import LetterDetailsWrapper from "./LetterDetailsWrapper";
 import IntroductionBodyWrapper from "./IntroductionBodyWrapper";
 import ImageWrapper from "./ImageWrapper";
 import SocialInfo from "./SocialInfo";
+import CommonFooter from "../../commonFooter/Footer";
 
 const CoverLetter1 = () => {
   const templateRef = useRef(null);
@@ -76,6 +77,9 @@ const CoverLetter1 = () => {
         editable={true}
         headerColor={backgroundColorss ? "white" : "black"}
       />
+      <div>
+        <CommonFooter />
+      </div>
     </div>
   );
 };
