@@ -11,8 +11,8 @@ const CommonFooter = ({ className = "" }) => {
         <Image
           src={logo}
           alt="Rewrite Canada Logo"
-          width={16}
-          height={16}
+          width={50}
+          height={50}
           className="object-contain"
         />
       </div>
