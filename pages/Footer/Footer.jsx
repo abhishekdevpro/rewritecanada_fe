@@ -279,6 +279,7 @@ const Footer = () => {
                 type="email"
                 placeholder="Email address"
                 value={email}
+                maxLength={50}
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 className="w-full sm:flex-1 px-4 py-3 rounded-md border border-white/50 bg-transparent text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white text-sm md:text-base"

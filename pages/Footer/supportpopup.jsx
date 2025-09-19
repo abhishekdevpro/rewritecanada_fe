@@ -23,6 +23,7 @@ const SupportPopup = ({ isOpen, onClose }) => {
     if (!formData.email.trim()) newErrors.email = "Email is required";
     if (!formData.category) newErrors.category = "Category is required";
     if (!formData.subject.trim()) newErrors.subject = "Subject is required";
+
     return newErrors;
   };
 
@@ -44,17 +45,21 @@ const SupportPopup = ({ isOpen, onClose }) => {
     setErrors({});
 
     try {
+      const requestData = {
+        first_name: formData.firstName,
+        last_name: formData.lastName,
+        email: formData.email,
+        category: formData.category,
+        subject: formData.subject,
+        description: formData.description,
+        lang: navigator.language || "en",
+      };
+
+      console.log("Sending support form data:", requestData);
+
       const response = await axiosInstance.post(
         "/api/user/support-form",
-        {
-          first_name: formData.firstName,
-          last_name: formData.lastName,
-          email: formData.email,
-          category: formData.category,
-          subject: formData.subject,
-          description: formData.description,
-          lang: navigator.language || "en",
-        },
+        requestData,
         {
           headers: {
             "Content-Type": "application/json",
@@ -93,7 +98,7 @@ const SupportPopup = ({ isOpen, onClose }) => {
           ×
         </button>
 
-        <h2 className="text-2xl font-bold mb-4 text-[#00b38d]">Support Form</h2>
+        <h2 className="text-2xl font-bold mb-4 text-mainColor">Support Form</h2>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="flex flex-col md:flex-row gap-4">
@@ -105,6 +110,7 @@ const SupportPopup = ({ isOpen, onClose }) => {
                 onChange={handleChange}
                 placeholder="First Name"
                 className="w-full p-2 border rounded"
+                maxLength={20}
               />
               {errors.firstName && (
                 <p className="text-red-600 text-sm">{errors.firstName}</p>
@@ -118,6 +124,7 @@ const SupportPopup = ({ isOpen, onClose }) => {
                 onChange={handleChange}
                 placeholder="Last Name"
                 className="w-full p-2 border rounded"
+                maxLength={20}
               />
               {errors.lastName && (
                 <p className="text-red-600 text-sm">{errors.lastName}</p>
@@ -134,6 +141,7 @@ const SupportPopup = ({ isOpen, onClose }) => {
               onChange={handleChange}
               placeholder="you@domain.com"
               className="w-full p-2 border rounded"
+              maxLength={50}
             />
             {errors.email && (
               <p className="text-red-600 text-sm">{errors.email}</p>
@@ -166,6 +174,7 @@ const SupportPopup = ({ isOpen, onClose }) => {
               onChange={handleChange}
               placeholder="Type your subject"
               className="w-full p-2 border rounded"
+              maxLength={50}
             />
             {errors.subject && (
               <p className="text-red-600 text-sm">{errors.subject}</p>
@@ -181,13 +190,14 @@ const SupportPopup = ({ isOpen, onClose }) => {
               placeholder="Describe your issue"
               rows="4"
               className="w-full p-2 border rounded"
+              maxLength={300}
             />
           </div>
 
           <div className="text-center">
             <button
               type="submit"
-              className="bg-[#00b38d] text-white px-6 py-2 rounded font-semibold hover:bg-green-600 disabled:opacity-50"
+              className="bg-mainColor text-white px-6 py-2 rounded font-semibold hover:bg-green-600 disabled:opacity-50"
               disabled={loading}
             >
               {loading ? "Submitting..." : "SUBMIT FORM"}
