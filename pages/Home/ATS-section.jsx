@@ -32,12 +32,21 @@ const ATSResumeSection = () => {
           {/* Content Section */}
           <div className="flex-1 space-y-4 md:space-y-6 p-4 lg:p-6 lg:my-12">
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-mainColor text-center lg:text-left">
-              Resumes optimized for applicant tracking systems (ATS)
+              {/* Resumes optimized for applicant tracking systems (ATS) */}
+              Introducing ReWrite Canada – the first Canadian resume builder
+              designed specifically for individuals facing barriers to
+              employment.
             </h1>
 
             <p className="text-mainColor text-base md:text-lg max-w-2xl text-center lg:text-left mx-auto lg:mx-0">
-              Enhance resumes and cover letters are vigorously tested against
-              major ATS systems to ensure complete parsability
+              {/* Enhance resumes and cover letters are vigorously tested against
+              major ATS systems to ensure complete parsability */}
+              Our social impact initiative uses AI to create free,
+              professional-quality resumes and cover letters for people in
+              shelters, low-income communities, and those living with
+              disabilities. By removing financial and technical obstacles, we
+              empower every job seeker to showcase their potential, regain
+              confidence, and access meaningful opportunities.
             </p>
           </div>
 
