@@ -130,22 +130,22 @@ const TemplateSelector = ({
 
             <div className="max-h-[70vh] overflow-y-auto px-4 py-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {templates.map((template, index) => {
-                const isDisabled = isBasicUser && index > 1;
+                //const isDisabled = isBasicUser && index > 1;
                 const isSelected = template.key === templateId;
 
                 return (
                   <div
                     key={template.key}
                     onClick={() => {
-                      if (isDisabled) {
-                        toast.info("Upgrade your plan to use this template.");
-                        return;
-                      }
+                      // if (isDisabled) {
+                      //   toast.info("Upgrade your plan to use this template.");
+                      //   return;
+                      // }
                       handleTemplateClick(template.key);
                     }}
                     className={`relative cursor-pointer transition-transform duration-200 ${
                       isSelected ? "scale-105" : "hover:scale-105"
-                    } ${isDisabled ? "opacity-50 cursor-not-allowed" : ""}`}
+                    }`}
                   >
                     <div
                       className={`rounded-xl p-2 border-2 transition-colors duration-300 ${
@@ -161,13 +161,13 @@ const TemplateSelector = ({
                           fill
                           className="object-fill"
                         />
-                        {isDisabled && (
+                        {/* {isDisabled && (
                           <Link href={"/payment"}>
                             <div className="absolute inset-0 bg-black bg-opacity-60 text-white text-sm font-semibold flex items-center justify-center rounded-lg">
                               🔒 Upgrade to use
                             </div>
                           </Link>
-                        )}
+                        )} */}
                       </div>
                       <div
                         className={`mt-2 text-center py-2 px-4 rounded-md transition-colors duration-300 ${
@@ -183,7 +183,7 @@ const TemplateSelector = ({
                 );
               })}
 
-              {isBasicUser && (
+              {/* {isBasicUser && (
                 <div className="text-center mt-6">
                   <Link href={"/payment"}>
                     <button className="bg-blue-950 hover:bg-blue-950 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition">
@@ -191,7 +191,7 @@ const TemplateSelector = ({
                     </button>
                   </Link>
                 </div>
-              )}
+              )} */}
             </div>
 
             <button
