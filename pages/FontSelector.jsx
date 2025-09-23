@@ -52,7 +52,7 @@ const FontSelector = () => {
     fetchUserProfile();
   }, []);
 
-  const fonts = userPlan === 1 ? freeFonts : allFonts; // Restrict fonts for free users
+  const fonts = allFonts; // Restrict fonts for free users
 
   return (
     <select

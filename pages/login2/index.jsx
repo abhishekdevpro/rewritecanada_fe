@@ -430,7 +430,7 @@ const Login2 = () => {
                 }`}
               disabled={!isChecked || isLoading} // Disabled when terms are not checked or loading
             >
-              Send Otp
+              Send OTP
             </Button>
           </form>
         </div>

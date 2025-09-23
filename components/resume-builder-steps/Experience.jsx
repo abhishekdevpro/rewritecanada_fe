@@ -88,11 +88,11 @@ export default function ExperienceStep({ onNext, onBack, onChange, value }) {
   };
 
   const handleSaveExperience = async () => {
-    if (!hasClickedExperience) {
-      // ✅ Only allow after manual click
-      toast.error(t("experienceStep.toast.selectExperience"));
-      return;
-    }
+    // if (!hasClickedExperience) {
+    //   // ✅ Only allow after manual click
+    //   toast.error(t("experienceStep.toast.selectExperience"));
+    //   return;
+    // }
 
     if (!resumeData) {
       toast.error(t("experienceStep.toast.resumeDataNotLoaded"));
@@ -168,7 +168,7 @@ export default function ExperienceStep({ onNext, onBack, onChange, value }) {
                 onChange({ ...value, experience: experience.id });
                 setExp(experience.id);
                 setHasClickedExperience(true); // ✅ Set true when user clicks
-              }}
+                handleSaveExperience(true)}}
               className={`w-full p-6 text-left rounded-xl border-2 flex items-center justify-between text-teal-700 font-semibold transition-all${
                 value.experience === experience.id
                   ? "border-teal-700 bg-[#e6f0f5]"
@@ -190,7 +190,7 @@ export default function ExperienceStep({ onNext, onBack, onChange, value }) {
             {t("experienceStep.back")}
           </button>
 
-          <button
+          {/* <button
             onClick={handleSaveExperience}
             disabled={loading || isLoading} // ✅ Disable only if loading or saving
             className={`px-8 py-3 rounded-lg font-medium transition-all shadow-md  
@@ -205,7 +205,7 @@ export default function ExperienceStep({ onNext, onBack, onChange, value }) {
             ) : (
               t("experienceStep.next")
             )}
-          </button>
+          </button> */}
         </div>
       </main>
     </div>

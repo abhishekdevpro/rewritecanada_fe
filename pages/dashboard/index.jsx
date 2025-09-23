@@ -10,7 +10,6 @@ import { useTranslation } from "react-i18next";
 import { useRouter } from "next/router";
 import FullScreenLoader from "../../components/ResumeLoader/Loader";
 import { Download, Edit, Trash, Plus } from "lucide-react";
-import AbroadiumCommunity from "../../components/dashboard/AbroadiumCommunity";
 import { BASE_URL } from "../../components/Constant/constant";
 import JobSearch from "../JobSearch";
 import { ResumeContext } from "../../components/context/ResumeContext";

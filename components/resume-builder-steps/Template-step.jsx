@@ -656,13 +656,13 @@ const TemplateStep = ({ onNext, onBack, onChange, value }) => {
                         : undefined,
                   }}
                 >
-                  <div className="relative aspect-[3/4] overflow-hidden">
+                  <div className="relative aspect-[4/5] overflow-hidden ">
                     <Image
                       src={template.imageUrl}
                       alt={template.name}
                       layout="fill"
                       objectFit="contain"
-                      className="transition-transform duration-300 group-hover:scale-105"
+                      className="transition-transform duration-300 group-hover:scale-100"
                       priority={index < 6}
                     />
                     {/* {isDisabled && (
