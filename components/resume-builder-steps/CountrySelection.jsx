@@ -103,10 +103,10 @@ export default function CountrySelection({ onBack, onSelectCountry }) {
       return;
     }
 
-    if (!selectedCountry) {
-      toast.error("Please select a country before proceeding");
-      return;
-    }
+    // if (!selectedCountry) {
+    //   toast.error("Please select a country before proceeding");
+    //   return;
+    // }
 
     const templateData = {
       templateData: formatResumeData(resumeData),
@@ -171,14 +171,16 @@ export default function CountrySelection({ onBack, onSelectCountry }) {
               <button
                 key={country.id}
                 onClick={() => {
+                  {handleSaveCountry}                  
                   console.log("Country clicked:", country.id);
                   setSelectedCountry(country.id);
+                  handleSaveCountry(true)
                 }}
                 className={`p-5 rounded-2xl shadow-md border border-gray-200 flex flex-col items-center transition-all duration-200 group ${
                   selectedCountry === country.id
                     ? "bg-mainColor text-white shadow-xl scale-105"
                     : "bg-lightColor hover:bg-mainColor hover:text-white text-white hover:shadow-xl"
-                }`}
+                }`}                
               >
                 <Image
                   src={country.flag}
@@ -209,7 +211,7 @@ export default function CountrySelection({ onBack, onSelectCountry }) {
             >
               Back
             </button>
-            <button
+            {/* <button
               onClick={handleSaveCountry}
               disabled={isNextButtonDisabled()}
               className={`px-8 py-3 rounded-lg font-medium transition-all shadow-md 
@@ -220,7 +222,7 @@ export default function CountrySelection({ onBack, onSelectCountry }) {
                 }`}
             >
               {isLoading ? <SaveLoader loadingText="Saving" /> : "Next"}
-            </button>
+            </button> */}
           </div>
         </div>
       </main>

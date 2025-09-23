@@ -205,7 +205,7 @@ const allColors = [
     value: "#4F46E5",
   },
 ];
-const freeColors = allColors.slice(1, 3);
+const freeColors = allColors.slice(1, 34);
 const ColorPicker = ({ selectedColor, onChange }) => {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
@@ -244,7 +244,7 @@ const ColorPicker = ({ selectedColor, onChange }) => {
     setIsOpen(false); // Close dropdown after selection
   };
 
-  const colors = userPlan === 1 ? freeColors : allColors;
+  const colors = allColors;
 
   return (
     <div className="relative flex items-center m-2 z-20 ">
@@ -253,7 +253,7 @@ const ColorPicker = ({ selectedColor, onChange }) => {
         className="rounded-lg border-2 border-mainColor px-4 py-2 bg-white text-mainColor font-medium 
     transition-transform duration-200 ease-in-out hover:scale-[1.02] hover:bg-lightColor hover:text-mainColor flex items-center gap-2"
       >
-        <Palette size={18} />
+        <Palette size={30} />
         <span className="hidden md:inline">Color Theme</span>
       </button>
       {/* <button
@@ -288,7 +288,7 @@ const ColorPicker = ({ selectedColor, onChange }) => {
         //     })}
         //   </div>
         // </div>
-        <div className="absolute top-10 mt-2 bg-white border rounded-3xl shadow-lg z-50 w-64 sm:w-auto">
+        <div className="absolute top-10 mt-2 bg-white border rounded-3xl shadow-lg z-50 w-64 sm:w-108">
           <div className="flex flex-wrap p-4 gap-3 bg-white rounded-3xl justify-center sm:justify-start">
             {colors.map((color, index) => {
               const isSelected = selectedColor === color.value;

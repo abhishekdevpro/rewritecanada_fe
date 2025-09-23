@@ -261,11 +261,11 @@ const TemplateStep = ({ onNext, onBack, onChange, value }) => {
 
   const templates = [
     // { key: "template1", imageUrl: template1, name: "Modern Clean" },
-    { key: "template2", imageUrl: template2, name: "Professional" },
-    { key: "template3", imageUrl: template3, name: "Creative" },
+    { key: "template1", imageUrl: template2, name: "Professional" },
+    { key: "template2", imageUrl: template3, name: "Creative" },
     // { key: "template4", imageUrl: template4, name: "Executive" },
     // { key: "template5", imageUrl: template5, name: "Minimal" },
-    { key: "template6", imageUrl: template6, name: "Classic" },
+    { key: "template3", imageUrl: template6, name: "Classic" },
     // { key: "template7", imageUrl: template7, name: "Contemporary" },
     // { key: "template8", imageUrl: template8, name: "Simple" },
     // { key: "template9", imageUrl: template9, name: "Elegant" },
@@ -311,7 +311,7 @@ const TemplateStep = ({ onNext, onBack, onChange, value }) => {
     //   // hasPhoto: true
     // },
     {
-      key: "template26",
+      key: "template4",
       imageUrl: template26,
       name: "Classic",
       // hasPhoto: false,
@@ -495,8 +495,8 @@ const TemplateStep = ({ onNext, onBack, onChange, value }) => {
 
   const handleSaveTemplate = async () => {
     if (!resumeData) return;
-    if (!value.template) {
-      toast.error("Please select a template before proceeding");
+    if (!value) {
+      toast.error("Please select a template before proceeding");    
       return;
     }
     const templateData = {
@@ -587,7 +587,7 @@ const TemplateStep = ({ onNext, onBack, onChange, value }) => {
           </h3>
           <div className="grid grid-cols-5 gap-4">
             {colors.map((color, index) => {
-              const isDisabled = isBasicUser && index > 1;
+              // const isDisabled = isBasicUser && index > 1;
               return (
                 <button
                   key={color.name}
@@ -598,42 +598,41 @@ const TemplateStep = ({ onNext, onBack, onChange, value }) => {
           selectedHexCode === color.hexCode
             ? `ring-2 ring-offset-2 ${color.selectedClass}`
             : "hover:ring-2 hover:ring-offset-2 hover:ring-gray-300"
-        }
-        ${isDisabled ? "opacity-50 cursor-not-allowed" : "hover:scale-110"}
+        }    
       `}
                   onClick={() => {
-                    {
-                      isDisabled && (
-                        <Link href={"/payment"}>
-                          <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center text-white text-sm font-semibold">
-                            🔒 Upgrade to use
-                          </div>
-                        </Link>
-                      );
-                    }
+                    // {
+                    //   isDisabled && (
+                    //     <Link href={"/payment"}>
+                    //       <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center text-white text-sm font-semibold">
+                    //         🔒 Upgrade to use
+                    //       </div>
+                    //     </Link>
+                    //   );
+                    // }
                     handleColorChange(color.hexCode, color.name);
                   }}
                   title={color.name}
-                  disabled={isDisabled}
+                  // disabled={isDisabled}
                 />
               );
             })}
           </div>
-          {isBasicUser && (
+          {/* {isBasicUser && (
             <button
               onClick={() => router.push("/payment")}
               className="mt-4 w-full bg-blue-950 hover:bg-blue-950 text-white text-sm font-semibold py-2 px-4 rounded-lg shadow-md transition duration-200"
             >
               Upgrade Your Plan to Unlock All Templates & Colors
             </button>
-          )}
+          )} */}
         </div>
 
         {/* Templates */}
         <div className="flex-1 overflow-y-auto max-h-[calc(100vh-200px)] scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {templates.map((template, index) => {
-              const isDisabled = isBasicUser && index > 1;
+              // const isDisabled = isBasicUser && index > 1;
               const isSelected = value.template === template.key;
 
               return (
@@ -641,41 +640,39 @@ const TemplateStep = ({ onNext, onBack, onChange, value }) => {
                   key={template.key}
                   className={`relative group rounded-xl overflow-hidden border-4 shadow-md transition-all duration-300
         ${isSelected ? "" : "hover:border-gray-300 hover:scale-105"}
-        ${isSelected ? `border-[${selectedHexCode}]` : "border-transparent"}
-        ${isDisabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}
+        ${isSelected ? `border-[${selectedHexCode}]` : "border-transparent"}      
       `}
-                  onClick={() => {
-                    if (isDisabled) {
-                      toast.info("Upgrade your plan to use premium templates.");
-                      return;
-                    }
-                    onChange({ ...value, template: template.key });
-                  }}
+                  // onClick={() => {
+                  //   if (isDisabled) {
+                  //     toast.info("Upgrade your plan to use premium templates.");
+                  //     return;
+                  //   }
+                  //   onChange({ ...value, template: template.key });
+                  // }}
                   style={{
                     borderColor:
-                      value.template === template.key
+                      template.value === template.key
                         ? selectedHexCode
                         : undefined,
                   }}
                 >
-                  <div className="relative aspect-[3/4] overflow-hidden">
+                  <div className="relative aspect-[4/5] overflow-hidden ">
                     <Image
                       src={template.imageUrl}
                       alt={template.name}
                       layout="fill"
                       objectFit="contain"
-                      className="transition-transform duration-300 group-hover:scale-105"
+                      className="transition-transform duration-300 group-hover:scale-100"
                       priority={index < 6}
                     />
-                    {isDisabled && (
+                    {/* {isDisabled && (
                       <Link href={"/payment"}>
                         <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center text-white text-sm font-semibold">
                           🔒 Upgrade to use
                         </div>
                       </Link>
-                    )}
-
-                    {!isDisabled && (
+                    )} */}
+                    
                       <div
                         onClick={handleSaveTemplate}
                         className="absolute inset-0 flex items-end justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-t from-black/60 to-transparent p-4"
@@ -688,8 +685,7 @@ const TemplateStep = ({ onNext, onBack, onChange, value }) => {
                             t("templateStep.usethistemplate")
                           )}
                         </span>
-                      </div>
-                    )}
+                      </div>                    
                   </div>
                 </div>
               );

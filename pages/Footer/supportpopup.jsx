@@ -23,6 +23,7 @@ const SupportPopup = ({ isOpen, onClose }) => {
     if (!formData.email.trim()) newErrors.email = "Email is required";
     if (!formData.category) newErrors.category = "Category is required";
     if (!formData.subject.trim()) newErrors.subject = "Subject is required";
+    if (!formData.description.trim()) newErrors.description = "Description is required";
 
     return newErrors;
   };
@@ -192,6 +193,9 @@ const SupportPopup = ({ isOpen, onClose }) => {
               className="w-full p-2 border rounded"
               maxLength={300}
             />
+            {errors.description && (
+                <p className="text-red-600 text-sm">{errors.description}</p>
+              )}
           </div>
 
           <div className="text-center">

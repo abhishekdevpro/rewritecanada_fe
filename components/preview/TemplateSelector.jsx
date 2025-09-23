@@ -45,11 +45,11 @@ const TemplateSelector = ({
 
   const allTemplates = [
     // { key: "template1", imageUrl: template1, pdfType: 1 },
-    { key: "template2", imageUrl: template2, pdfType: 3 },
-    { key: "template3", imageUrl: template3, pdfType: 3 },
+    { key: "template2", imageUrl: template2, pdfType: 3, name_t: "template1" },
+    { key: "template3", imageUrl: template3, pdfType: 3, name_t: "template2" },
     // { key: "template4", imageUrl: template4, pdfType: 1 },
     // { key: "template5", imageUrl: template5, pdfType: 3 },
-    { key: "template6", imageUrl: template6, pdfType: 2 },
+    { key: "template6", imageUrl: template6, pdfType: 2, name_t: "template3" },
     // { key: "template7", imageUrl: template7, pdfType: 2 },
     // { key: "template8", imageUrl: template8, pdfType: 2 },
     // { key: "template9", imageUrl: template9, pdfType: 1 },
@@ -69,7 +69,7 @@ const TemplateSelector = ({
     // { key: "template23", imageUrl: template23, pdfType: 2 },
     // { key: "template24", imageUrl: template24, pdfType: 3 },
     // { key: "template25", imageUrl: template25, pdfType: 1 },
-    { key: "template26", imageUrl: template26, pdfType: 3 },
+    { key: "template26", imageUrl: template26, pdfType: 3, name_t: "template4" },
     // { key: "template27", imageUrl: template27, pdfType: 3 },
     // { key: "template28", imageUrl: template21, pdfType: 2 },
   ];
@@ -105,7 +105,7 @@ const TemplateSelector = ({
   }, []);
   useEffect(() => {
     const selectedIndex = templates.findIndex(
-      (template) => template.key === selectedTemplate
+      (template) => template.name_t === selectedTemplate
     );
     if (selectedIndex !== -1) {
       setCurrentIndex(selectedIndex);
@@ -124,14 +124,14 @@ const TemplateSelector = ({
   // };
   const handleTemplateClick = (template) => {
     const templateIndex = templates.findIndex((t) => t.key === template.key);
-    if (isBasicUser && templateIndex > 1) {
-      setShowUpgradeMessage(true);
-      setTimeout(() => setShowUpgradeMessage(false), 2500);
-      return;
-    }
+    // if (isBasicUser && templateIndex > 1) {
+    //   setShowUpgradeMessage(true);
+    //   setTimeout(() => setShowUpgradeMessage(false), 2500);
+    //   return;
+    // }
 
     setSelectedTemplate(template.key);
-    setTemplateId(template.key);
+    setTemplateId(template.name_t);
     setSelectedPdfType(template.pdfType);
     closeModal();
   };
@@ -196,28 +196,28 @@ const TemplateSelector = ({
 
             <div className="max-h-[70vh] overflow-y-auto px-4 py-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {templates.map((template, index) => {
-                const isLocked = isBasicUser && index > 1;
+                //const isLocked = isBasicUser && index > 1;
 
-                {
-                  showUpgradeMessage && (
-                    <div className="fixed top-5 left-1/2 -translate-x-1/2 bg-red-600 text-white px-4 py-2 rounded shadow-lg z-[9999]">
-                      Please upgrade your plan to use this template.
-                    </div>
-                  );
-                }
+                // {
+                //   showUpgradeMessage && (
+                //     <div className="fixed top-5 left-1/2 -translate-x-1/2 bg-red-600 text-white px-4 py-2 rounded shadow-lg z-[9999]">
+                //       Please upgrade your plan to use this template.
+                //     </div>
+                //   );
+                // }
                 return (
                   <div
-                    key={template.key}
+                    key={template.imageUrl}
                     onClick={() => handleTemplateClick(template)}
                     className={`cursor-pointer transition-transform duration-200 ${
-                      template.key === templateId
+                      template.imageUrl === templateId
                         ? "scale-105"
                         : "hover:scale-105"
-                    } ${isLocked ? "opacity-50 pointer-events-auto" : ""}`}
+                    }`}
                   >
                     <div
                       className={`rounded-xl p-2 border-2 relative transition-colors duration-300 ${
-                        template.key === templateId
+                        template.imageUrl === templateId
                           ? "border-teal-600 bg-blue-100"
                           : "border-transparent hover:border-blue-300"
                       }`}
@@ -225,33 +225,33 @@ const TemplateSelector = ({
                       <div className="relative w-full h-full aspect-[3/4] overflow-hidden rounded-lg shadow-md">
                         <Image
                           src={template.imageUrl}
-                          alt={template.key}
+                          alt={template.imageUrl}
                           fill
                           className="object-fill"
                         />
-                        {isLocked && (
+                        {/* {isLocked && (
                           <Link href={"/payment"}>
                             <div className="absolute inset-0 bg-white bg-opacity-70 flex items-center justify-center text-center text-sm font-semibold text-red-600 px-2">
                               🔒 Upgrade to use
                             </div>
                           </Link>
-                        )}
+                        )} */}
                       </div>
                       <div
                         className={`text-center mt-2 font-medium ${
-                          template.key === templateId
+                          template.imageUrl === templateId
                             ? "text-teal-600"
                             : "text-gray-600"
                         }`}
                       >
-                        {template.key}
+                        {template.name_t}
                       </div>
                     </div>
                   </div>
                 );
               })}
             </div>
-            {isBasicUser && (
+            {/* {isBasicUser && (
               <div className="text-center mt-6">
                 <Link href={"/payment"}>
                   <button className="bg-blue-950 hover:bg-blue-950 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition">
@@ -259,7 +259,7 @@ const TemplateSelector = ({
                   </button>
                 </Link>
               </div>
-            )}
+            )} */}
             <button
               onClick={closeModal}
               className="w-full sm:w-auto px-6 py-2.5 my-4 bg-gray-800 text-white font-semibold rounded-lg hover:bg-gray-700 transition-colors duration-200 flex items-center justify-center mx-auto"
