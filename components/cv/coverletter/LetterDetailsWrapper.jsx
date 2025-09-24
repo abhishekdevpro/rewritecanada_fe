@@ -1,4 +1,5 @@
 import React from "react";
+import DefaultCoverLetterData from "../../utility/DefaultCoverLetterData";
 import PropTypes from "prop-types";
 
 const LetterDetailsWrapper = ({
@@ -107,10 +108,12 @@ LetterDetailsWrapper.propTypes = {
   className: PropTypes.string,
 };
 
-LetterDetailsWrapper.defaultProps = {
+LetterDetailsWrapper.DefaultCoverLetterData = {
   editable: false,
   headerColor: "black",
   className: "",
+
+
 };
 
 export default LetterDetailsWrapper;

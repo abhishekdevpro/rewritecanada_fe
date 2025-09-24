@@ -14,7 +14,8 @@ const CoverLetter4 = () => {
     useContext(CoverLetterContext);
 
   return (
-    <div className="" style={{ fontFamily: `${selectedFont}` }}>
+    <div className="flex flex-col justify-between" style={{ fontFamily: `${selectedFont}`, height: "1100px" }}>
+      <div>
       <div
         className=" mx-auto p-4 "
         // style={{ backgroundColor: backgroundColorss || "white" }}
@@ -79,6 +80,7 @@ const CoverLetter4 = () => {
         headerColor={backgroundColorss ? "white" : "black"}
         className="px-8 mt-2"
       />
+      </div>
       <div>
         <CommonFooter />
       </div>

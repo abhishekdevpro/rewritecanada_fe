@@ -26,7 +26,7 @@ const ImageWrapper = ({
           alt={alt}
           width={finalSize}
           height={finalSize}
-          className="object-cover w-full h-full"
+          className="object-top object-cover w-full h-full"
         />
       ) : (
         <div className="w-full h-full bg-gray-300 flex items-center justify-center">

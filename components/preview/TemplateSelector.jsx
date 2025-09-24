@@ -44,10 +44,10 @@ const TemplateSelector = ({
   // Default PDF type
 
   const allTemplates = [
-    { key: "template1", imageUrl: template1, pdfType: 1 },
+    { key: "template1", imageUrl: template1, pdfType: 3 },
     { key: "template2", imageUrl: template2, pdfType: 3},
-    { key: "template3", imageUrl: template3, pdfType: 3},
-    { key: "template4", imageUrl: template4, pdfType: 1 },
+    { key: "template3", imageUrl: template3, pdfType: 2},
+    { key: "template4", imageUrl: template4, pdfType: 3},
     // { key: "template5", imageUrl: template5, pdfType: 3 },
     // { key: "template6", imageUrl: template6, pdfType: 2},
     // { key: "template7", imageUrl: template7, pdfType: 2 },

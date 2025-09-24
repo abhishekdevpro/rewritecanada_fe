@@ -464,7 +464,7 @@ import WorkExperience from "./WorkExperience";
 import ProjectsSection from "./ProjectSection";
 import CommonFooter from "../commonFooter/Footer";
 
-const Template2 = () => {
+const Template1 = () => {
   const {
     resumeData,
     setResumeData,
@@ -563,4 +563,4 @@ const Template2 = () => {
   );
 };
 
-export default Template2;
+export default Template1;

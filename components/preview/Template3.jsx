@@ -26,7 +26,7 @@ import ProjectsSection from "./ProjectSection";
 import EducationSection from "./Education";
 import CommonFooter from "../commonFooter/Footer";
 
-const Template6 = () => {
+const Template3 = () => {
   const {
     resumeData,
     setResumeData,
@@ -49,7 +49,7 @@ const Template6 = () => {
     <div className="" style={{ fontFamily: `${selectedFont}` }}>
       <section className="flex justify-between">
         <aside
-          className="w-1/12 bg-[#d4d4d8] p-4"
+          className="w-1/12 bg-[#d4d4d8] p-0"
           style={{ backgroundColor: backgroundColorss }}
         ></aside>
         <div className="w-11/12 p-4">
@@ -156,4 +156,4 @@ const Template6 = () => {
   );
 };
 
-export default Template6;
+export default Template3;
