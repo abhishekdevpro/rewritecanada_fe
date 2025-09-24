@@ -44,12 +44,12 @@ const TemplateSelector = ({
   // Default PDF type
 
   const allTemplates = [
-    // { key: "template1", imageUrl: template1, pdfType: 1 },
-    { key: "template2", imageUrl: template2, pdfType: 3, name_t: "template1" },
-    { key: "template3", imageUrl: template3, pdfType: 3, name_t: "template2" },
-    // { key: "template4", imageUrl: template4, pdfType: 1 },
+    { key: "template1", imageUrl: template1, pdfType: 1 },
+    { key: "template2", imageUrl: template2, pdfType: 3},
+    { key: "template3", imageUrl: template3, pdfType: 3},
+    { key: "template4", imageUrl: template4, pdfType: 1 },
     // { key: "template5", imageUrl: template5, pdfType: 3 },
-    { key: "template6", imageUrl: template6, pdfType: 2, name_t: "template3" },
+    // { key: "template6", imageUrl: template6, pdfType: 2},
     // { key: "template7", imageUrl: template7, pdfType: 2 },
     // { key: "template8", imageUrl: template8, pdfType: 2 },
     // { key: "template9", imageUrl: template9, pdfType: 1 },
@@ -69,7 +69,7 @@ const TemplateSelector = ({
     // { key: "template23", imageUrl: template23, pdfType: 2 },
     // { key: "template24", imageUrl: template24, pdfType: 3 },
     // { key: "template25", imageUrl: template25, pdfType: 1 },
-    { key: "template26", imageUrl: template26, pdfType: 3, name_t: "template4" },
+    // { key: "template26", imageUrl: template26, pdfType: 3},
     // { key: "template27", imageUrl: template27, pdfType: 3 },
     // { key: "template28", imageUrl: template21, pdfType: 2 },
   ];
@@ -105,7 +105,7 @@ const TemplateSelector = ({
   }, []);
   useEffect(() => {
     const selectedIndex = templates.findIndex(
-      (template) => template.name_t === selectedTemplate
+      (template) => template.key=== selectedTemplate
     );
     if (selectedIndex !== -1) {
       setCurrentIndex(selectedIndex);
@@ -131,7 +131,7 @@ const TemplateSelector = ({
     // }
 
     setSelectedTemplate(template.key);
-    setTemplateId(template.name_t);
+    setTemplateId(template.key);
     setSelectedPdfType(template.pdfType);
     closeModal();
   };
@@ -210,14 +210,14 @@ const TemplateSelector = ({
                     key={template.imageUrl}
                     onClick={() => handleTemplateClick(template)}
                     className={`cursor-pointer transition-transform duration-200 ${
-                      template.imageUrl === templateId
+                      template.key === templateId
                         ? "scale-105"
                         : "hover:scale-105"
                     }`}
                   >
                     <div
                       className={`rounded-xl p-2 border-2 relative transition-colors duration-300 ${
-                        template.imageUrl === templateId
+                        template.key === templateId
                           ? "border-teal-600 bg-blue-100"
                           : "border-transparent hover:border-blue-300"
                       }`}
@@ -225,7 +225,7 @@ const TemplateSelector = ({
                       <div className="relative w-full h-full aspect-[3/4] overflow-hidden rounded-lg shadow-md">
                         <Image
                           src={template.imageUrl}
-                          alt={template.imageUrl}
+                          alt={template.key}
                           fill
                           className="object-fill"
                         />
@@ -239,12 +239,12 @@ const TemplateSelector = ({
                       </div>
                       <div
                         className={`text-center mt-2 font-medium ${
-                          template.imageUrl === templateId
+                          template.key === templateId
                             ? "text-teal-600"
                             : "text-gray-600"
                         }`}
                       >
-                        {template.name_t}
+                        {template.key}
                       </div>
                     </div>
                   </div>
