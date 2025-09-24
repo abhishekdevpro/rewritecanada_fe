@@ -23,9 +23,10 @@ const CoverLetter1 = () => {
   return (
     <div
       ref={templateRef}
-      className=""
-      style={{ fontFamily: `${selectedFont}` }}
+      className="flex flex-col justify-between"
+      style={{ fontFamily: `${selectedFont}`, height:"1122px"}}
     >
+      <div>
       <div
         className=" flex justify-between p-4 gap-2 "
         style={{ backgroundColor: backgroundColorss }}
@@ -77,6 +78,7 @@ const CoverLetter1 = () => {
         editable={true}
         headerColor={backgroundColorss ? "white" : "black"}
       />
+      </div>
       <div>
         <CommonFooter />
       </div>

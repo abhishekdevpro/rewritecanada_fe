@@ -21,8 +21,8 @@ const CoverLetter2 = () => {
           className="right-column w-4/12  px-4 py-8 "
           style={{
             backgroundColor: backgroundColorss,
-            minHeight: "1122px",
-            maxHeight: "auto",
+            minHeight: "1000px",
+            maxHeight: "1100px",
           }}
         >
           <div className="flex justify-center items-center mb-4">
